@@ -1,0 +1,111 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>લોકશાહીમાં સમાનતા — Revision Sheet</title>
+<style>
+:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672; --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77; --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77; --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.5;padding:0 14px}
+.wrap{max-width:980px;margin:0 auto;padding-block:20px 60px}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(22px,5vw,28px);margin:0 0 2px;text-wrap:balance}
+.subtitle{color:var(--ink-2);font-size:13px;margin:0 0 16px}
+.scan{background:var(--accent-bg);border:1.5px solid var(--accent);border-radius:12px;padding:12px 16px;margin-bottom:18px}
+.scan-label{font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.scan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 14px;font-size:13.5px;color:var(--accent-ink);font-weight:600}
+.scan-grid span{min-width:0;overflow-wrap:anywhere;line-height:1.4}
+h2{font-family:var(--font-display);font-weight:600;font-size:17px;margin:22px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+h2 .n{font-family:var(--font-mono);font-size:11px;color:var(--accent);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.card{border-radius:10px;padding:10px 12px;border:1px solid;font-size:13.5px}
+.card .lbl{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px;display:block;opacity:.85}
+.card .f{font-family:var(--font-mono);font-size:15px;font-weight:600;line-height:1.35}
+.card .m{font-size:12.5px;margin-top:3px;opacity:.9}
+.c-formula{background:var(--formula-bg);border-color:var(--formula-line);color:var(--formula)}
+.c-exam{background:var(--exam-bg);border-color:var(--exam-line);color:var(--exam)}
+.c-mistake{background:var(--mistake-bg);border-color:var(--mistake-line);color:var(--mistake)}
+.c-check{background:var(--check-bg);border-color:var(--check-line);color:var(--check)}
+.c-neutral{background:var(--surface);border-color:var(--line);color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:5px 6px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:11.5px}
+td.rl{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2);font-size:12px}
+.tblcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px;overflow-x:auto}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;margin:0}
+.diagram svg{display:block;width:100%;height:auto;max-height:200px}
+.diagram-cap{text-align:center;font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.vis{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;margin-bottom:8px}
+.strip{display:flex;flex-wrap:wrap;gap:6px}
+.pill{background:var(--mistake-bg);border:1px solid var(--mistake-line);color:var(--mistake);border-radius:8px;padding:6px 10px;font-size:12.5px;flex:1 1 220px}
+.footer-note{text-align:center;color:var(--ink-3);font-size:11.5px;margin-top:26px}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+Gujarati:wght@400;600&display=swap" rel="stylesheet">
+<div class="wrap">
+<h1>પ્રકરણ 15 · લોકશાહીમાં સમાનતા — પુનરાવર્તન પત્રક</h1>
+<p class="subtitle">ધોરણ 7 સામાજિક વિજ્ઞાન (નાગરિકશાસ્ત્ર) · GSEB · પરીક્ષા પહેલાં 10 મિનિટ · દરેક ↗ Chapter Notes ના ભાગ પર લઈ જાય</p>
+
+<div class="scan"><span class="scan-label">10 સેકન્ડમાં યાદ</span><div class="scan-grid">
+<span>સમાનતા = સમાન તક + સમાન સન્માન</span><span>કાયદા આધારે 6 સમાનતા</span><span>મતદાન: 18 વર્ષ કે વધુ</span><span>બાળમજૂરી: 14 વર્ષ સુધી મફત શિક્ષણ</span>
+<span>સરખું કામ = સરખો પગાર</span><span>ચૂંટણીપંચ = ડર વગરનું મતદાન</span><span>અસમાનતા = શાંતિથી ઉકેલ (ગ્રામસભા)</span><span>સમાનતા ≠ ન્યાય (પેટીનું ચિત્ર)</span>
+</div></div>
+
+<h2><span class="n">00</span>સમાનતાનો પાયો <a class="jumpicon" href="../Chapter%20Notes/Ch15%20Equality%20in%20Democracy.html#intro" target="ss15ChapterNotes" title="Chapter notes ખોલો">↗</a></h2>
+<div class="grid"><div class="card c-formula"><span class="lbl">વ્યાખ્યા</span><div class="m">લોકશાહી = લોકો દ્વારા શાસન · બંધારણ = દેશના નિયમોની માર્ગદર્શિકા</div></div>
+<div class="card c-exam"><span class="lbl">સમાનતા ≠ ન્યાય</span><div class="m">સમાનતા = સૌને સરખી તક · ન્યાય = દરેકને જરૂર મુજબ મદદ</div></div></div>
+
+<h2><span class="n">01</span>છ પ્રકારની સમાનતા <a class="jumpicon" href="../Chapter%20Notes/Ch15%20Equality%20in%20Democracy.html#p1" target="ss15ChapterNotes" title="Chapter notes ખોલો">↗</a></h2>
+<div class="tblcard"><table><tr><th>ધર્મ</th><th>ભાષા / બોલી</th><th>શિક્ષણ</th></tr>
+<tr><td>વ્યક્તિગત વિકાસ</td><td>લિંગ</td><td>વિચારોની અભિવ્યક્તિ</td></tr></table></div>
+
+<h2><span class="n">02</span>મતાધિકાર <a class="jumpicon" href="../Chapter%20Notes/Ch15%20Equality%20in%20Democracy.html#p2" target="ss15ChapterNotes" title="Chapter notes ખોલો">↗</a></h2>
+<div class="vis"><div class="diagram"><svg viewBox="0 0 380 218" width="100%" style="max-width:380px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="190.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વય-મર્યાદા (વર્ષ)</text><line x1="10" y1="110" x2="370" y2="110" stroke="var(--ink)" stroke-width="1.2"/><text x="370.0" y="106.0" text-anchor="end" font-size="9.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">0</text><rect x="42.4" y="40.0" width="115.2" height="70.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="100.0" y="35.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">18</text><text x="100.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મતદાર (વય)</text><rect x="222.4" y="55.6" width="115.2" height="54.4" rx="3" fill="var(--formula)" opacity="0.6"/><text x="280.0" y="50.6" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">14</text><text x="280.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બાળમજૂરી
+ની ઉપરની મર્યાદા</text></svg></div></div>
+<div class="grid"><div class="card c-formula"><span class="lbl">મતદાર</span><div class="f">18 વર્ષ અને વધુ</div></div>
+<div class="card c-neutral"><span class="lbl">ચૂંટણીપંચ</span><div class="m">ડર-ધાકધમકી વગર મતદાન · મહિલા મતદાન મથક · દિવ્યાંગ માટે ખાસ સુવિધા</div></div>
+<div class="card c-mistake"><span class="lbl">ભૂલ</span><div class="m">18 વર્ષથી નીચેનાં મતદાન ન કરી શકે — 18 એટલે 18 અને વધુ</div></div></div>
+
+<h2><span class="n">03</span>બાળમજૂરી, શ્રમ, મહેનતાણું <a class="jumpicon" href="../Chapter%20Notes/Ch15%20Equality%20in%20Democracy.html#p3" target="ss15ChapterNotes" title="Chapter notes ખોલો">↗</a></h2>
+<div class="grid"><div class="card c-exam"><span class="lbl">14 વર્ષ</span><div class="m">14 વર્ષ સુધી મફત, ફરજિયાત, સાર્વત્રિક શિક્ષણ · નીચેના બાળકને મજૂરીએ રાખવું = કાયદાનો ભંગ</div></div>
+<div class="card c-formula"><span class="lbl">મહેનતાણું</span><div class="f">સરખું કામ = સરખો પગાર</div><div class="m">ઓછો પગાર (મહિલા, દિવ્યાંગ) = અન્યાય</div></div></div>
+
+<h2><span class="n">04</span>અસમાનતા: ગામનો કૂવો <a class="jumpicon" href="../Chapter%20Notes/Ch15%20Equality%20in%20Democracy.html#p4" target="ss15ChapterNotes" title="Chapter notes ખોલો">↗</a></h2>
+<div class="vis"><div class="diagram"><svg viewBox="0 0 540 82" width="100%" style="max-width:540px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="270.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">પાઠ્યપુસ્તકનું ઉદાહરણ — અસમાનતા કેવી રીતે ઊભી થાય</text><rect x="5.0" y="22" width="113.0" height="54" rx="9" fill="var(--surface)" stroke="var(--formula)" stroke-width="1.8"/><text x="61.5" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--formula)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ગામમાં</text><text x="61.5" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બે જ કૂવા</text><line x1="121.0" y1="49.0" x2="139.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="143.0,49.0 137.0,52.3 137.0,45.7" fill="var(--ink-2)"/><rect x="144.0" y="22" width="113.0" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="200.5" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">એક કૂવો</text><text x="200.5" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ખલાસ</text><line x1="260.0" y1="49.0" x2="278.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="282.0,49.0 276.0,52.3 276.0,45.7" fill="var(--ink-2)"/><rect x="283.0" y="22" width="113.0" height="54" rx="9" fill="var(--surface)" stroke="var(--exam)" stroke-width="1.8"/><text x="339.5" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--exam)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">અડધા ગામને</text><text x="339.5" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">પાણી નહીં</text><line x1="399.0" y1="49.0" x2="417.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="421.0,49.0 415.0,52.3 415.0,45.7" fill="var(--ink-2)"/><rect x="422.0" y="22" width="113.0" height="54" rx="9" fill="var(--surface)" stroke="var(--exam)" stroke-width="1.8"/><text x="478.5" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--exam)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">અસમાનતા</text><text x="478.5" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">હક ઘવાયો</text></svg></div></div>
+<div class="grid"><div class="card c-neutral"><span class="lbl">ઉકેલ (5 ગુણ)</span><div class="m">ગ્રામસભામાં પ્રશ્ન · ગ્રામપંચાયતને લેખિત અરજી · વિકલ્પ (બીજો કૂવો/પાઇપલાઇન) · શાંતિથી સમજાવવું</div></div>
+<div class="card c-mistake"><span class="lbl">સામાન્ય ભૂલ</span><div class="m">અસમાનતા જોઈને ઝઘડો કરવો — ના, શાંતિથી</div></div></div>
+
+<h2><span class="n">!</span>છેલ્લી ઘડીની ભૂલો</h2>
+<div class="strip"><div class="pill">બાળમજૂરીની ઉંમર 18 ✗ → 14 ✓</div><div class="pill">કાયદા કારોબારી બનાવે ✗ → ધારાસભા ✓</div><div class="pill">સરખા કામમાં ઓછો પગાર = ઠીક ✗ → અન્યાય ✓</div></div>
+<p class="footer-note">પાઠ્યપુસ્તક પાન 93–96 · Chapter Notes અને Teaching Guide સાથે સુમેળમાં</p>
+</div>

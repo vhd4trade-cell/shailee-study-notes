@@ -1,0 +1,122 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>રાજ્ય સરકાર — સ્વાધ્યાયના જવાબ</title>
+<style>
+:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672; --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77; --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77; --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.5;padding:0 14px}
+.wrap{max-width:980px;margin:0 auto;padding-block:20px 60px}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(22px,5vw,28px);margin:0 0 2px;text-wrap:balance}
+.subtitle{color:var(--ink-2);font-size:13px;margin:0 0 16px}
+.scan{background:var(--accent-bg);border:1.5px solid var(--accent);border-radius:12px;padding:12px 16px;margin-bottom:18px}
+.scan-label{font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.scan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 14px;font-size:13.5px;color:var(--accent-ink);font-weight:600}
+.scan-grid span{min-width:0;overflow-wrap:anywhere;line-height:1.4}
+h2{font-family:var(--font-display);font-weight:600;font-size:17px;margin:22px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+h2 .n{font-family:var(--font-mono);font-size:11px;color:var(--accent);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.card{border-radius:10px;padding:10px 12px;border:1px solid;font-size:13.5px}
+.card .lbl{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px;display:block;opacity:.85}
+.card .f{font-family:var(--font-mono);font-size:15px;font-weight:600;line-height:1.35}
+.card .m{font-size:12.5px;margin-top:3px;opacity:.9}
+.c-formula{background:var(--formula-bg);border-color:var(--formula-line);color:var(--formula)}
+.c-exam{background:var(--exam-bg);border-color:var(--exam-line);color:var(--exam)}
+.c-mistake{background:var(--mistake-bg);border-color:var(--mistake-line);color:var(--mistake)}
+.c-check{background:var(--check-bg);border-color:var(--check-line);color:var(--check)}
+.c-neutral{background:var(--surface);border-color:var(--line);color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:5px 6px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:11.5px}
+td.rl{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2);font-size:12px}
+.tblcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px;overflow-x:auto}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;margin:0}
+.diagram svg{display:block;width:100%;height:auto;max-height:200px}
+.diagram-cap{text-align:center;font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.vis{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;margin-bottom:8px}
+.strip{display:flex;flex-wrap:wrap;gap:6px}
+.pill{background:var(--mistake-bg);border:1px solid var(--mistake-line);color:var(--mistake);border-radius:8px;padding:6px 10px;font-size:12.5px;flex:1 1 220px}
+.footer-note{text-align:center;color:var(--ink-3);font-size:11.5px;margin-top:26px}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+Gujarati:wght@400;600&display=swap" rel="stylesheet">
+<div class="wrap">
+<h1>પ્રકરણ 16 · રાજ્ય સરકાર — સ્વાધ્યાયના જવાબ</h1>
+<p class="subtitle">પાઠ્યપુસ્તક પાન 106–107 · જવાબ પાઠ્યપુસ્તકના લખાણ પર આધારિત</p>
+
+<h2><span class="n">1</span>ખાલી જગ્યા પૂરો</h2>
+<div class="tblcard"><table><tr><th>પ્રશ્ન</th><th>જવાબ</th></tr>
+<tr><td class="rl">(1) ગુજરાતની વિધાનસભામાં સભ્યસંખ્યા ___ છે.</td><td>182</td></tr>
+<tr><td class="rl">(2) રાજ્યની ધારાસભાના ઉપલા ગૃહને ___ કહે છે.</td><td>વિધાનપરિષદ</td></tr>
+<tr><td class="rl">(3) ગુજરાત વિધાનસભા ભવનનું નામ ___ છે.</td><td>વિઠ્ઠલભાઈ પટેલ વિધાનસભા ભવન</td></tr>
+<tr><td class="rl">(4) વિધાનસભાની ચૂંટણી દર ___ વર્ષે થાય છે.</td><td>5</td></tr>
+<tr><td class="rl">(5) દર્દીની તાત્કાલિક સેવા માટે ગુજરાતમાં ___ યોજના છે.</td><td>108</td></tr></table></div>
+
+<h2><span class="n">2</span>ખરું કે ખોટું</h2>
+<div class="tblcard"><table><tr><th>વિધાન</th><th>જવાબ</th><th>કારણ</th></tr>
+<tr><td class="l">(1) મુખ્યમંત્રી અમૃતમ્ (મા) યોજના કેન્દ્ર સરકાર ચલાવે છે.</td><td>ખોટું</td><td class="l">તે રાજ્ય સરકારની યોજના છે.</td></tr>
+<tr><td class="l">(2) દિલ્હી રાજ્ય એક રાષ્ટ્રીય રાજધાનીનો પ્રદેશ છે.</td><td>ખરું</td><td class="l">પાઠ્યપુસ્તક તેને "વિશેષ રાજ્ય" કહે છે; શિક્ષક સાથે ચર્ચા કરો (સરકારી નામ "રાષ્ટ્રીય રાજધાની પ્રદેશ").</td></tr>
+<tr><td class="l">(3) વિધાનસભાને નીચલું ગૃહ પણ કહેવાય છે.</td><td>ખરું</td><td class="l">વિધાનસભા = નીચલું ગૃહ.</td></tr>
+<tr><td class="l">(4) ઉત્તર પ્રદેશમાં વિધાનપરિષદ છે.</td><td>ખરું</td><td class="l">પાઠ્યપુસ્તકની યાદીમાં ઉત્તર પ્રદેશ છે.</td></tr>
+<tr><td class="l">(5) વિધાનસભા કાયમી ગૃહ છે.</td><td>ખોટું</td><td class="l">તેની મુદત 5 વર્ષ; કાયમી તો વિધાનપરિષદ.</td></tr></table></div>
+
+<h2><span class="n">3</span>એક-બે વાક્યમાં ઉત્તર</h2>
+<div class="tblcard"><table><tr><th>પ્રશ્ન</th><th>જવાબ</th></tr>
+<tr><td class="rl">(1) ખરડો ક્યારે કાયદો બને છે?</td><td class="l">વિધાનસભા મંજૂર કરે અને રાજ્યપાલ સહી કરીને મંજૂરી આપે ત્યારે.</td></tr>
+<tr><td class="rl">(2) રાજ્ય સરકારનાં અંગો જણાવો.</td><td class="l">ધારાસભા, કારોબારી અને ન્યાયતંત્ર.</td></tr>
+<tr><td class="rl">(3) મુખ્યમંત્રીની નિમણૂક કોણ કરે છે?</td><td class="l">રાજ્યપાલ (બહુમતી પક્ષના નેતાને).</td></tr>
+<tr><td class="rl">(4) વિધાનસભામાં કોના માધ્યમથી પ્રશ્ન પૂછાય છે?</td><td class="l">ધારાસભ્યો (વિધાનસભ્યો) દ્વારા.</td></tr>
+<tr><td class="rl">(5) રાષ્ટ્રપતિ શાસન હોય ત્યારે રાજ્યનો વહીવટ કોણ સંભાળે છે?</td><td class="l">રાજ્યપાલ.</td></tr></table></div>
+
+<h2><span class="n">4</span>ટૂંક નોંધ</h2>
+<div class="card c-neutral"><span class="lbl">(1) રાજ્યપાલનાં કાર્યો</span><div class="m">બહુમતી પક્ષના નેતાની મુખ્યમંત્રી તરીકે નિમણૂક · મુખ્યમંત્રીની સલાહે મંત્રીઓની નિમણૂક · વિધાનસભા બોલાવવી/વિખેરવી · એડ્વોકેટ જનરલ અને જાહેર સેવા આયોગની નિમણૂક · ખરડા પર સહી · તટસ્થ રહી વહીવટ પર ધ્યાન. (Notes Part 03)</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(2) જાહેર સ્વાસ્થ્ય સેવાઓ</span><div class="m">PHC, ગ્રામીણ આરોગ્ય પેટા કેન્દ્ર, સિવિલ હૉસ્પિટલ · બાળકો માટે રસીકરણ · સ્વચ્છતા અભિયાન · પીવાના શુદ્ધ પાણી · તાત્કાલિક સેવા (108). (Notes Part 05)</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(3) મુખ્યમંત્રીનાં કાર્યો</span><div class="m">મંત્રીમંડળની બેઠક બોલાવે · દરેક મંત્રીના કાર્ય પર દેખરેખ · મંત્રીઓને માર્ગદર્શન · મંત્રીમંડળના નિર્ણયોની રાજ્યપાલને જાણ · મંત્રીઓને ખાતાઓની વહેંચણી. (Notes Part 03)</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(4) ધારાસભાની રચના</span><div class="m">બે ગૃહ: વિધાનસભા (નીચલું, 5 વર્ષ, ગુજરાતમાં 182 બેઠક) અને વિધાનપરિષદ (ઉપલું, કાયમી, 6 વર્ષ; ગુજરાતમાં નથી). (Notes Part 02)</div></div>
+
+<h2><span class="n">5</span>ત્રણ-ચાર વાક્યોમાં ઉત્તર</h2>
+<div class="card c-neutral"><span class="lbl">(1) રાજ્ય સરકારનાં કાર્યો</span><div class="m">ગરીબોને સસ્તા અનાજ · રસીકરણ · આરોગ્ય સેવાઓ · વીજળી, પાકા રસ્તા, શુદ્ધ પાણી · અકસ્માત/કુદરતી આફતોમાં સહાય · કાયદો અને વ્યવસ્થા.</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(2) નાગરિકના સ્વાસ્થ્ય માટે રાજ્ય સરકાર ક્યાં કાર્યો કરે?</span><div class="m">સસ્તા અનાજની દુકાનો · રસીકરણ · દારૂબંધી અને ભેળસેળ પર નિયંત્રણ · 108 યોજના · સ્વચ્છતા અને શૌચાલય અભિયાન · સસ્તી દવા (જનઔષધિ) · રોગ નિયંત્રણ.</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(3) વિધાનસભાના સભ્ય બનવાની લાયકાત</span><div class="m">ભારતનો નાગરિક · વય 25 વર્ષ કે વધુ · સરકારી સંસ્થામાં સવેતન હોદ્દો નહીં · નાદાર, અસ્થિર મગજનો કે સજા પામેલ ગુનેગાર નહીં.</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(4) રાજ્યની કારોબારીની રચના</span><div class="m">રાજ્યપાલ (કેન્દ્ર નિમે) → મુખ્યમંત્રી (બહુમતી પક્ષનો નેતા) → મંત્રીમંડળ (કેબિનેટ, રાજ્ય, નાયબ કક્ષા), અને વહીવટી અધિકારીઓ.</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(5) કારોબારીની ફરજો</span><div class="m">કાયદાનો અમલ · રાજ્યની તકેદારી · આર્થિક અને સામાજિક સમસ્યા દૂર કરવી · ગરીબી, બેકારી દૂર કરવા આયોજન · શિક્ષણ, સ્વાસ્થ્ય, વીજળી જેવી સેવાઓ · અંદાજપત્ર.</div></div>
+
+<h2><span class="n">!</span>વિશેષ પ્રશ્નો (ચર્ચા માટે — શિક્ષક સાથે તપાસો)</h2>
+<div class="card c-check"><span class="lbl">(a) સરપંચ ગામ માટે કાયદો બનાવી શકે?</span><div class="m">સરપંચ "કાયદો" ન બનાવી શકે. ગ્રામપંચાયત ઠરાવ કરે, અને ગ્રામસભામાં ચર્ચા થાય. ગામ-વિકાસના નિયમો સ્થાનિક સ્વરાજ્યના કાયદા/નિયમો મુજબ બને — શિક્ષક સાથે ચકાસો.</div></div>
+<div class="card c-check" style="margin-top:6px"><span class="lbl">(b) 24 વર્ષની વ્યક્તિની ધારાસભ્ય ઉમેદવારી</span><div class="m">ઉમેદવારી માન્ય ન રહે — ધારાસભ્ય બનવા લઘુતમ વય 25 વર્ષ છે.</div></div>
+<div class="card c-check" style="margin-top:6px"><span class="lbl">(c) ખરડો અને કાયદાનો ભેદ</span><div class="m">ખરડો = કાયદાનો મુસદ્દો (ચર્ચા માટે); કાયદો = વિધાનસભા મંજૂર કરે અને રાજ્યપાલ સહી કરે ત્યારે.</div></div>
+<div class="card c-check" style="margin-top:6px"><span class="lbl">(d) કચ્છમાં મતદાર નોંધાયેલી વ્યક્તિની દિલ્હીની ઉમેદવારી</span><div class="m">ઉમેદવાર તે રાજ્યની મતદારયાદીમાં નોંધાયેલો હોવો જોઈએ જ્યાં ચૂંટણી લડે છે; કચ્છમાં નોંધણી હોય તો દિલ્હીની ઉમેદવારી સામાન્ય રીતે માન્ય ન રહે. ચૂંટણીપંચના નિયમ મુજબ શિક્ષક સાથે ચકાસો.</div></div>
+<p class="footer-note">"વિશેષ પ્રશ્નો" ના જવાબ ચર્ચા-આધારિત છે; શાળામાં શિક્ષક જે કહે તે જ સાચું ગણવું.</p>
+</div>

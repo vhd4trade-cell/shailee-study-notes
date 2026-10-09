@@ -1,0 +1,287 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>લોકશાહીમાં સમાનતા — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+Gujarati:wght@400;600&display=swap" rel="stylesheet">
+<div class="wrap">
+<h1>પ્રકરણ 15 · લોકશાહીમાં સમાનતા</h1>
+<p class="subtitle">ધોરણ 7 સામાજિક વિજ્ઞાન (નાગરિકશાસ્ત્ર) · GSEB ગુજરાતી માધ્યમ · પાઠ્યપુસ્તક: GSSTB, પાન 93–96</p>
+
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: સમાનતા એટલે શું, બંધારણ કઈ કઈ બાબતમાં સમાનતા આપે છે, અને સમાનતા ન હોય ત્યાં શું થાય તે ઉદાહરણથી સમજાવવું.
+<ol>
+<li><span class="n">00</span><a href="#intro">પ્રકરણ શું કહે છે</a> — લોકશાહી, બંધારણ, સમાનતાનો અર્થ</li>
+<li><span class="n">01</span><a href="#p1">સમાનતાના પ્રકાર</a> — કાયદા આધારે છ બાબતો</li>
+<li><span class="n">02</span><a href="#p2">મતાધિકારમાં સમાનતા</a> — 18 વર્ષ, ચૂંટણીપંચ</li>
+<li><span class="n">03</span><a href="#p3">બાળમજૂરી, શ્રમ અને મહેનતાણું</a></li>
+<li><span class="n">04</span><a href="#p4">અસમાનતા: એક પડકાર</a> — ગામનો કૂવો, ગ્રામસભા</li>
+<li><span class="n">05</span><a href="#p5">સારાંશ અને પરીક્ષાના જવાબ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પ્રકરણ શું કહે છે</h2>
+<p class="part-why">શા માટે ભણવું: "સૌને સમાન તક" — આ વાક્ય લોકશાહીનો પાયો છે, અને પરીક્ષામાં પણ વારંવાર આવે છે.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+(1) લોકશાહી, બંધારણ અને સમાનતાના અર્થ સમજાવી શકશો, (2) કાયદા આધારે સમાનતાના પ્રકાર ઓળખી શકશો, (3) મતદાન, બાળમજૂરી અને મહેનતાણાંમાં સમાનતા કેમ જરૂરી છે તે કહી શકશો, (4) અસમાનતાના ઉદાહરણ આપી તેનો ઉકેલ વિચારી શકશો.</div>
+
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span>
+<b>લોકશાહી</b> = <b>લોક</b> (લોકો) + <b>શાહી</b> (શાસન). ગ્રીક શબ્દ <i>demokratia</i> = <i>demos</i> (લોકો) + <i>kratos</i> (શાસન). એટલે લોકો દ્વારા ચાલતું શાસન.<br>
+<b>બંધારણ</b> = રચના કરેલી માર્ગદર્શિકા — દેશ કેવી રીતે ચાલશે તેના નિયમો. અંગ્રેજી <i>constitution</i> = <i>constitute</i> (રચવું).<br>
+<b>સમાનતા</b> = સમાન (સરખું) + તા (ભાવ) → સૌને સરખો અધિકાર અને સરખો સન્માન.</div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું — સમાનતાની વ્યાખ્યા</span>
+<div class="f">સમાનતા = સૌને સમાન અધિકાર + સૌને સમાન સન્માન + કાયદા સમક્ષ સમાનતા</div>
+<div class="meaning">પાઠ્યપુસ્તક મુજબ: સરકાર બંધારણ મુજબ સૌને સમાન તક આપવા કાર્ય કરે છે.</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>
+શાળાની દોડ: ત્રણ બાળકો દોડે, પણ એકને મોટર-સાઇકલ, બીજાને સાઇકલ, ત્રીજાને પગ — તો તે <b>સમાનતા નથી</b>. બધાને એક જ સ્તરથી શરૂઆત આપવી તે સમાનતા. (પાઠ્યપુસ્તક પાન 93 નું ચિત્ર — "સમાનતા" અને "ન્યાય" — તે જુઓ.)</div>
+<div class="why-box box"><span class="label">ચિત્ર સમજો</span>
+પાન 93 ના ચિત્રમાં દરેક બાળક પાસે ઊંચાઈ વધારવા જુદી-જુદી પેટી છે. પેટી સરખી આપવી = <b>સમાનતા</b>. દરેકને તેની જરૂરિયાત મુજબ પેટી આપવી = <b>ન્યાય</b>. પાઠ્યપુસ્તક કહે છે: સમાનતા અને ન્યાય અલગ છે.</div>
+
+<h3>પ્રકરણનો નકશો</h3>
+<div class="tblwrap"><table><tr><th>Part</th><th>શું</th><th>પ્રશ્ન પ્રકાર</th></tr>
+<tr><td class="rowlabel">01</td><td class="l">સમાનતાના પ્રકાર</td><td class="l">ટૂંકનોંધ, યાદી</td></tr>
+<tr><td class="rowlabel">02–03</td><td class="l">મતાધિકાર, બાળમજૂરી, શ્રમ</td><td class="l">ટૂંકનોંધ (5 ગુણ)</td></tr>
+<tr><td class="rowlabel">04</td><td class="l">અસમાનતા અને ગ્રામસભા</td><td class="l">મુદ્દાસર, જોડકાં</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> Part 01 — બંધારણ કઈ બાબતોમાં સમાનતા આપે છે.</div>
+</div>
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>સમાનતાના પ્રકાર</h2>
+<p class="part-why">શા માટે ભણવું: "કાયદા આધારે સમાનતા"ની છ બાબતો યાદી-પ્રશ્નમાં આવે છે. (પાન 93)</p>
+<div class="submap"><span>ધર્મ</span><span>ભાષા / બોલી</span><span>શિક્ષણ</span><span>વ્યક્તિગત વિકાસ</span><span>લિંગ</span><span>વિચારોની અભિવ્યક્તિ</span></div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું — કાયદા આધારે છ સમાનતા</span>
+<div class="tblwrap"><table><tr><th>ક્રમ</th><th>સમાનતા</th><th>અર્થ (એક લીટી)</th></tr>
+<tr><td class="rowlabel">1</td><td class="l">ભિન્ન-ભિન્ન ધર્મની વ્યક્તિઓમાં</td><td class="l">દરેક ધર્મના લોકો સાથે સરખો વ્યવહાર</td></tr>
+<tr><td class="rowlabel">2</td><td class="l">ભાષા કે બોલીના આધારે</td><td class="l">ભાષા કે બોલીથી કોઈને ઓછું ન ગણાય</td></tr>
+<tr><td class="rowlabel">3</td><td class="l">શિક્ષણ મેળવવામાં</td><td class="l">દરેક બાળકને ભણવાનો સરખો હક</td></tr>
+<tr><td class="rowlabel">4</td><td class="l">વ્યક્તિગત વિકાસમાં</td><td class="l">ભણવું, વિકસવું, ધંધા-રોજગારની તક સૌને</td></tr>
+<tr><td class="rowlabel">5</td><td class="l">લિંગ આધારિત</td><td class="l">સ્ત્રી અને પુરુષને સરખા હક</td></tr>
+<tr><td class="rowlabel">6</td><td class="l">વિચારોની અભિવ્યક્તિમાં</td><td class="l">દરેક નાગરિક પોતાનો વિચાર કહી શકે</td></tr></table></div></div>
+
+<h3>1a. સમાનતાનો અર્થ — "સમાન તક" એટલે શું?</h3>
+<p>કોઈ એક સ્થળે પહોંચવાની હરીફાઈ રાખવામાં આવે. એક ખેલાડીને સાઇકલ, બીજાને મોટરસાઇકલ અને ત્રીજાને દોડતાં પહોંચવાનું હોય, તો તે <b>સમાનતા ન કહેવાય</b>. આ ત્રણેને સાઇકલ, મોટરસાઇકલ કે દોડવાની સમાન તક આપવામાં આવે તો જ સૌને સમાન અવસર મળ્યો કહેવાય.</p>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"સમાનતા" = "બધાને એક જ વસ્તુ" નથી. સમાનતા = <b>સૌને સરખી તક</b>. જેને જરૂર હોય તેને વધુ મદદ કરવી પણ સમાનતાની ભાવનામાં છે.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) બંધારણમાં કેટલી બાબતોમાં સમાનતા છે? (ii) દોડની ઉદાહરણમાં સમાનતા ક્યાં ન રહી?<br><span class="src">જવાબ: (i) છ (ii) ત્રણેને સરખા સાધન ન આપ્યાં</span></div>
+
+<h3>1b. સમાનતા ક્યાં ચકાસાય છે</h3>
+<div class="tblwrap"><table><tr><th>ક્ષેત્ર</th><th>સમાનતાનો ઉદાહરણ</th></tr>
+<tr><td class="rowlabel">કાયદો</td><td class="l">કાયદા સમક્ષ સરખો વ્યવહાર — ગરીબ હોય કે ધનવાન</td></tr>
+<tr><td class="rowlabel">ચૂંટણી</td><td class="l">18 વર્ષથી મોટી ઉંમરના દરેકને મત</td></tr>
+<tr><td class="rowlabel">શિક્ષણ</td><td class="l">14 વર્ષ સુધી મફત અને ફરજિયાત શિક્ષણ</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> Part 02 — મતદાનમાં સમાનતા.</div>
+</div>
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>મતાધિકારમાં સમાનતા</h2>
+<p class="part-why">શા માટે ભણવું: 5 ગુણની ટૂંકનોંધ — "મતાધિકારમાં સમાનતા" — ઘણી વાર પૂછાય છે. (પાન 94)</p>
+<div class="submap"><span>લોકશાહી: લોકો દ્વારા</span><span>18 વર્ષ</span><span>ચૂંટણીપંચ</span><span>મહિલા અને દિવ્યાંગ માટે સુવિધા</span></div>
+
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span>
+<b>મતાધિકાર</b> = મત + અધિકાર (હક) → મત આપવાનો કાયદેસરનો હક. <b>ચૂંટણીપંચ</b> = ચૂંટણી કરાવતી સ્વતંત્ર સંસ્થા.</div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું</span>
+<div class="f">18 વર્ષ અને તેથી વધુ ઉંમરના દરેક ભારતીય નાગરિક → મતદાન</div>
+<div class="meaning">કોઈ પણ નાગરિક મતદાન કરી શકે — ધર્મ, ભાષા, લિંગ, બોલી કે આર્થિક સ્થિતિ ગમે તે હોય. (પાન 94)</div></div>
+<div class="diagram"><svg viewBox="0 0 380 218" width="100%" style="max-width:380px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="190.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વય-મર્યાદા (વર્ષ)</text><line x1="10" y1="110" x2="370" y2="110" stroke="var(--ink)" stroke-width="1.2"/><text x="370.0" y="106.0" text-anchor="end" font-size="9.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">0</text><rect x="42.4" y="40.0" width="115.2" height="70.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="100.0" y="35.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">18</text><text x="100.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મતદાર (વય)</text><rect x="222.4" y="55.6" width="115.2" height="54.4" rx="3" fill="var(--formula)" opacity="0.6"/><text x="280.0" y="50.6" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">14</text><text x="280.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બાળમજૂરી
+ની ઉપરની મર્યાદા</text></svg><div class="diagram-cap">મતદારની લઘુતમ વય 18 — બાળમજૂરીની ઉપરની મર્યાદા 14 — બંને વચ્ચે 4 વર્ષનો ફરક.</div></div>
+<div class="formula-box box"><span class="label">ચૂંટણીપંચની ભૂમિકા</span>
+<div class="f">ડર વગર, તટસ્થ, સલામત મતદાન</div>
+<div class="meaning">ચૂંટણીપંચ ધાકધમકી, દાદાગીરી કે ડર વગર મતદાન થાય તે માટે વ્યવસ્થા કરે છે. દરેક બૂથ પર ખાસ વ્યવસ્થા, મહિલાઓ માટે અલગ મતદાન મથકો, અને દિવ્યાંગો માટે ખાસ સુવિધા.</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>
+તમારા ઘરની સોસાયટીમાં મતદાન મથક પર વ્હીલચેરની ઢાળ હોય, તો દિવ્યાંગ દાદા-દાદી જાતે મત આપી શકે. આ ચૂંટણીપંચની સમાનતાની વ્યવસ્થા છે.</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"મતદાનની ઉંમર 18 છે" એ ગોખીને "મતદાન 18 વર્ષથી નીચેના પણ કરી શકે" લખવું. ના — <b>18 વર્ષ અને તેથી વધુ</b>.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) મતદાનની લઘુતમ ઉંમર? (ii) ચૂંટણી સમયે ડર કોણ દૂર કરે?<br><span class="src">જવાબ: (i) 18 વર્ષ (ii) ચૂંટણીપંચ</span></div>
+<div class="next-line">→ <b>આગળ:</b> Part 03 — બાળમજૂરી, અને શ્રમમાં સમાનતા.</div>
+</div>
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>બાળમજૂરી, શ્રમ અને મહેનતાણું</h2>
+<p class="part-why">શા માટે ભણવું: બાળઅધિકાર અને શ્રમિક સમાનતા — ટૂંકનોંધ-પ્રશ્ન "બાળમજૂરી અને બાળઅધિકાર". (પાન 94–95)</p>
+<div class="submap"><span>બાળમજૂરી</span><span>14 વર્ષ</span><span>મફત શિક્ષણ</span><span>સમાન મહેનતાણું</span></div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું — બાળમજૂરી</span>
+<div class="f">14 વર્ષ સુધીના બાળકને મજૂરીએ રાખવું = કાયદાનો ભંગ</div>
+<div class="meaning">આપણા દેશના સૌ નાગરિકને 14 વર્ષ સુધી મફત, ફરજિયાત અને સાર્વત્રિક શિક્ષણનો અધિકાર છે. (પાન 94)</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>
+હોટેલ કે ચાની દુકાનમાં 12 વર્ષનો છોકરો કામ કરતો હોય, તો તે બાળમજૂરી છે. તેનો ભણવાનો હક છીનવાય છે.</div>
+
+<h3>3a. શ્રમ અને મહેનતાણું — સમાન કામ, સમાન પગાર</h3>
+<p>એક જ સરખા કામમાં પુરુષ અને મહિલાને મજૂરી ચૂકવવામાં ભેદભાવ રાખવામાં આવે તે <b>અન્યાય</b>. કેટલાંક કામ દિવ્યાંગ વ્યક્તિઓ જોડે કરાવવામાં આવે, અને તેમને મહેનતાણું ખૂબ ઓછું આપવામાં આવે — તે પણ અન્યાય છે. (પાન 94)</p>
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span>
+<b>મહેનતાણું</b> = મહેનત + અણું (કિંમત, મૂલ્ય) → કામના બદલામાં મળતી રકમ, પગાર.</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"મહિલાઓ ઓછું કામ કરે એટલે ઓછો પગાર" — ના. <b>સરખું કામ = સરખો પગાર</b>.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) 14 વર્ષની નીચેના બાળકને કામે રાખવું શું છે? (ii) સરખા કામમાં ઓછો પગાર કેમ અન્યાય?<br><span class="src">જવાબ: (i) બાળમજૂરી — કાયદાનો ભંગ (ii) સમાન કામનો સમાન હક ભંગાય</span></div>
+<div class="next-line">→ <b>આગળ:</b> Part 04 — અસમાનતા જ્યારે ગામમાં ઊભી થાય.</div>
+</div>
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>અસમાનતા: એક પડકાર</h2>
+<p class="part-why">શા માટે ભણવું: પાઠ્યપુસ્તકનું "કૂવા"નું ઉદાહરણ અને ગ્રામસભા — 5 ગુણનો વિચારપ્રશ્ન. (પાન 95–96)</p>
+<div class="submap"><span>ઉદાહરણ: બે કૂવા</span><span>સમાનતાનો ભંગ</span><span>ગ્રામસભા</span></div>
+
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span>
+<b>અસમાનતા</b> = અ (નહીં) + સમાનતા → સરખું ન હોવું, ભેદભાવ.</div>
+
+<h3>4a. ગામના કૂવાનું ઉદાહરણ</h3>
+<p>ગામમાં પાણીના બે જ કૂવા છે. એક કૂવામાં પાણી ખલાસ થઈ ગયું. હવે અડધા ગામના લોકોને પાણી ભરવાની અગવડ પડતી હતી. કૂવામાં પાણી ખલાસ થઈ જશે એ ડરથી એક વિસ્તારના લોકો બીજા વિસ્તારને પાણી ભરવા દેતા ન હતા. આ <b>અસમાનતા</b> કહેવાય.</p>
+<div class="diagram"><svg viewBox="0 0 540 82" width="100%" style="max-width:540px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="270.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">પાઠ્યપુસ્તકનું ઉદાહરણ — અસમાનતા કેવી રીતે ઊભી થાય</text><rect x="5.0" y="22" width="113.0" height="54" rx="9" fill="var(--surface)" stroke="var(--formula)" stroke-width="1.8"/><text x="61.5" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--formula)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ગામમાં</text><text x="61.5" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બે જ કૂવા</text><line x1="121.0" y1="49.0" x2="139.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="143.0,49.0 137.0,52.3 137.0,45.7" fill="var(--ink-2)"/><rect x="144.0" y="22" width="113.0" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="200.5" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">એક કૂવો</text><text x="200.5" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ખલાસ</text><line x1="260.0" y1="49.0" x2="278.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="282.0,49.0 276.0,52.3 276.0,45.7" fill="var(--ink-2)"/><rect x="283.0" y="22" width="113.0" height="54" rx="9" fill="var(--surface)" stroke="var(--exam)" stroke-width="1.8"/><text x="339.5" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--exam)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">અડધા ગામને</text><text x="339.5" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">પાણી નહીં</text><line x1="399.0" y1="49.0" x2="417.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="421.0,49.0 415.0,52.3 415.0,45.7" fill="var(--ink-2)"/><rect x="422.0" y="22" width="113.0" height="54" rx="9" fill="var(--surface)" stroke="var(--exam)" stroke-width="1.8"/><text x="478.5" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--exam)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">અસમાનતા</text><text x="478.5" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">હક ઘવાયો</text></svg><div class="diagram-cap">પાઠ્યપુસ્તકના ઉદાહરણની ક્રમિક રીત — દરેક પગલું કારણ બને છે.</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>
+ગુજરાતના ગામોમાં ઘણી વાર પાણીની પાઇપલાઇન એક જ બાજુ પહોંચે, બીજી બાજુના લોકોને ટેન્કરની રાહ જોવી પડે. આ પણ અસમાનતા છે — અને તેનો ઉકેલ ગ્રામસભામાં ચર્ચાથી આવે.</div>
+
+<h3>4b. ગ્રામસભા — સમાનતાની જાગૃતિ</h3>
+<p>જ્યાં દયાભાવ જોવામાં આવે ત્યાં સમજવું કે સામેવાળી વ્યક્તિને સમાન અધિકાર મળ્યો નથી. આવી બાબતો સમજવા આપણે જાતે શું કરી શકીએ તે વિચારવું જરૂરી છે. <b>ગ્રામસભા</b> એ ગામના દરેક પુખ્ત નાગરિકની સભા છે, જ્યાં ગામના પ્રશ્નો ચર્ચાય.</p>
+<div class="why-box box"><span class="label">તમે શું કરી શકો</span>
+(1) સ્વચ્છતા જાળવો — કારણ કે સ્વચ્છતાનો આગ્રહ પોતાનાથી શરૂ થાય. (2) ગ્રામસભામાં પ્રશ્ન ઉઠાવો. (3) ખોટી વાતો (ઊંચો-નીચો) સામે અવાજ ઉઠાવો — ઝઘડો નહીં, શાંતિથી.</div>
+
+<h3>4c. પાઠ્યપુસ્તકની વિગત — કોઈ કેવી રીતે ઉકેલે</h3>
+<div class="tblwrap"><table><tr><th>ક્રમ</th><th>વિગત</th><th>આપણે શું કરી શકીએ?</th></tr>
+<tr><td class="rowlabel">1</td><td class="l">મહિલાને ઓછી મજૂરી આપે તો?</td><td class="l">મહેનતાણાનો પ્રશ્ન ગ્રામસભા/કાયદાકીય સલાહમાં લઈ જવો</td></tr>
+<tr><td class="rowlabel">2</td><td class="l">વ્યક્તિનું આર્થિક શોષણ થાય તો?</td><td class="l">શાળા, ગ્રામપંચાયત કે પોલીસને જાણ કરવી</td></tr>
+<tr><td class="rowlabel">3</td><td class="l">બાળમજૂર જોવા મળે તો?</td><td class="l">બાળ-સહાય હેલ્પલાઇન/પોલીસને જાણ કરવી</td></tr>
+<tr><td class="rowlabel">4</td><td class="l">દિવ્યાંગ માટેની બસની સીટ પર અન્ય બેઠું હોય તો?</td><td class="l">નમ્રતાથી સમજાવવું; કંડક્ટરને જાણ કરવી</td></tr></table></div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>અસમાનતા જોઈને ગુસ્સામાં ઝઘડો કરવો. પાઠ્યપુસ્તક કહે છે: <b>શાંતિથી, સમાનતાના ભાવ સાથે</b> વર્તન.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) ગામમાં પાણી ખલાસ થવાથી શું થયું? (ii) ગ્રામસભા શું છે? (iii) અસમાનતા જોઈને શું ન કરવું?<br><span class="src">જવાબ: (i) અડધા ગામને પાણી ન મળ્યું — અસમાનતા (ii) ગામના નાગરિકોની સભા (iii) ઝઘડો</span></div>
+<div class="next-line">→ <b>આગળ:</b> Part 05 — સારાંશ અને પરીક્ષાના જવાબ.</div>
+</div>
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>સારાંશ અને પરીક્ષાના જવાબ</h2>
+<p class="part-why">પરીક્ષા પહેલાં આ એક પાનું.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol>
+<li>લોકશાહી = લોકો દ્વારા શાસન; બંધારણ = દેશના નિયમોની માર્ગદર્શિકા.</li>
+<li>કાયદા આધારે છ સમાનતા: ધર્મ, ભાષા/બોલી, શિક્ષણ, વ્યક્તિગત વિકાસ, લિંગ, વિચારોની અભિવ્યક્તિ.</li>
+<li>મતદાન: 18 વર્ષ અને તેથી વધુ; ચૂંટણીપંચ ડર વગરનું મતદાન કરાવે.</li>
+<li>બાળમજૂરી: 14 વર્ષ સુધી મફત, ફરજિયાત શિક્ષણ; બાળમજૂરી કાયદાનો ભંગ.</li>
+<li>સરખું કામ = સરખો પગાર; અસમાનતા જોઈ શાંતિથી ગ્રામસભા/સંબંધિત સત્તાને જાણ કરો.</li></ol></div>
+
+<h3>પરીક્ષાના નમૂના જવાબ</h3>
+<div class="example"><span class="label">1–2 ગુણ — એક-બે વાક્યમાં</span><div class="step"><b>પ્ર.</b> મતાધિકાર કોને મળે છે?</div><div class="step"><b>જ.</b> 18 વર્ષ કે તેથી વધુ ઉંમરના દરેક ભારતીય નાગરિકને મતાધિકાર મળે છે.</div></div>
+<div class="example"><span class="label">5 ગુણ — ટૂંકનોંધ</span><div class="step"><b>પ્ર.</b> બાળમજૂરી અને બાળઅધિકાર.</div><div class="step"><b>જ.</b> (1) 14 વર્ષ સુધીના બાળકને મજૂરીએ રાખવું એ કાયદાનો ભંગ છે. (2) આપણા દેશના સૌ નાગરિકોને 14 વર્ષ સુધી મફત, ફરજિયાત અને સાર્વત્રિક શિક્ષણનો અધિકાર છે. (3) આધુનિક સમયમાં ઘણી વાર દીકરીઓને ભણવા ન દેવાનું વલણ જોવા મળે છે, જે અન્યાય છે. (4) બાળકો શાળામાં ભણે તે તેમનો બાળઅધિકાર છે. (5) બાળમજૂરી અટકાવવી એ દરેક નાગરિકની ફરજ છે.</div></div>
+<div class="example"><span class="label">5 ગુણ — વિચારપ્રશ્ન (ગ્રામસભા)</span><div class="step"><b>પ્ર.</b> ગામમાં એક જ કૂવો હોય અને બીજા ભાગને પાણી ન મળે તો શું કરશો?</div><div class="step"><b>જ.</b> (1) પ્રથમ, અસમાનતા કઈ છે તે સમજવી. (2) ગ્રામસભામાં પ્રશ્ન ઉઠાવવો. (3) ગ્રામપંચાયતને લેખિત અરજી કરવી. (4) વિકલ્પ માટે બીજા કૂવા/પાઇપલાઇનની માંગ કરવી. (5) ઝઘડો ટાળી શાંતિથી સમજાવવું.</div></div>
+
+<div class="next-line">→ <b>આગળ:</b> પ્રકરણ 16 — રાજ્ય સરકાર.</div>
+</div>
+</div>

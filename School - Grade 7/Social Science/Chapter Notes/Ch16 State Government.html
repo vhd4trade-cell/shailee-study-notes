@@ -1,0 +1,358 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>રાજ્ય સરકાર — Chapter Notes</title>
+<style>:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672;
+  --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --why:#5B5647; --why-bg:#F3F0E7; --why-line:#DAD4C2;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+    --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+    --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77;
+  --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  --why:#C7C0AC; --why-bg:#241F16; --why-line:#3A3428;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.75;padding:0 16px;font-size:16px}
+.wrap{max-width:760px;margin:0 auto;padding-block:32px 80px}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;text-wrap:balance;color:var(--ink)}
+h1{font-size:clamp(28px,6vw,38px);margin:0 0 6px}
+.subtitle{color:var(--ink-2);font-size:15px;margin:0 0 28px}
+h2{font-size:24px;margin:0 0 4px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2 .num{color:var(--accent);font-family:var(--font-mono);font-size:15px;font-weight:600}
+.part-why{color:var(--ink-2);font-size:14.5px;margin:0 0 18px;font-style:italic}
+h3{font-size:18px;margin:30px 0 10px;color:var(--accent-ink)}
+p{margin:0 0 12px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:36px}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2)}
+.dot{width:10px;height:10px;border-radius:3px;flex:none}
+.dot.formula{background:var(--formula)} .dot.exam{background:var(--exam)} .dot.mistake{background:var(--mistake)}
+.dot.check{background:var(--check)} .dot.concept{background:var(--accent)} .dot.why{background:var(--why)}
+.part{padding:32px 0;border-top:1px solid var(--line)}
+.part:first-of-type{border-top:none}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:32px}
+.toc ol{margin:8px 0 0;padding-left:0;list-style:none}
+.toc li{margin-bottom:5px;font-size:14.5px}
+.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--ink-3)}
+.toc .n{font-family:var(--font-mono);color:var(--accent);font-size:13px;font-weight:600;margin-right:6px}
+.box{border-radius:12px;padding:14px 18px;margin:14px 0;border:1px solid;font-size:15px}
+.box .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;display:block}
+.formula-box{background:var(--formula-bg);border-color:var(--formula-line)}
+.formula-box .label{color:var(--formula)}
+.formula-box .f{font-family:var(--font-mono);font-size:18px;color:var(--formula);font-weight:600;margin:4px 0}
+.formula-box .meaning{color:var(--ink-2);font-size:14px}
+.concept-box{background:var(--surface);border-color:var(--line);border-left:3px solid var(--accent)}
+.concept-box .label{color:var(--accent)}
+.exam-box{background:var(--exam-bg);border-color:var(--exam-line)} .exam-box .label{color:var(--exam)}
+.mistake-box{background:var(--mistake-bg);border-color:var(--mistake-line)} .mistake-box .label{color:var(--mistake)}
+.check-box{background:var(--check-bg);border-color:var(--check-line)} .check-box .label{color:var(--check)}
+.why-box{background:var(--why-bg);border-color:var(--why-line)} .why-box .label{color:var(--why)}
+.extra-box{background:var(--surface);border:1px dashed var(--ink-3)} .extra-box .label{color:var(--ink-3)}
+.parent-box{background:var(--accent-bg);border-color:var(--accent)} .parent-box .label{color:var(--accent-ink)}
+.outcome{background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 16px}
+.outcome .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;display:block}
+.submap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 6px}
+.submap span{background:var(--surface-2);border:1px solid var(--line);border-radius:20px;padding:4px 12px;font-size:12.5px;color:var(--ink-2)}
+.next-line{font-size:14px;color:var(--ink-2);margin-top:18px;padding-top:14px;border-top:1px dashed var(--line)}
+.next-line b{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+th,td{padding:8px 10px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:12.5px}
+td.rowlabel{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2)}
+td.l{text-align:left}
+.tblwrap{overflow-x:auto}
+.example{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:14px 0;font-size:15px}
+.example .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-bottom:6px;display:block}
+.example .step{margin:3px 0}
+.example .step b{color:var(--ink-2);font-weight:600}
+.mono{font-family:var(--font-mono)}
+.remember{background:var(--accent-bg);border:1px solid var(--accent);border-radius:12px;padding:16px 20px;margin:16px 0}
+.remember .label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.remember ol{margin:0;padding-left:18px} .remember li{margin-bottom:5px}
+.badge{display:inline-block;font-size:11px;font-family:var(--font-mono);padding:2px 8px;border-radius:20px;background:var(--exam-bg);color:var(--exam);border:1px solid var(--exam-line);margin-left:6px;vertical-align:middle}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;margin:16px 0}
+.diagram svg{display:block;width:100%;height:auto}
+.diagram-cap{text-align:center;font-size:13px;color:var(--ink-3);margin-top:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:600px){.pair{grid-template-columns:1fr}}
+.pair .diagram{margin:6px 0}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+.src{font-size:12.5px;color:var(--ink-3)}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+Gujarati:wght@400;600&display=swap" rel="stylesheet">
+<div class="wrap">
+<h1>પ્રકરણ 16 · રાજ્ય સરકાર</h1>
+<p class="subtitle">ધોરણ 7 સામાજિક વિજ્ઞાન (નાગરિકશાસ્ત્ર) · GSEB ગુજરાતી માધ્યમ · પાઠ્યપુસ્તક: GSSTB, પાન 97–107</p>
+
+<div class="legend">
+<div class="legend-item"><span class="dot why"></span>કેમ / રોજિંદું ઉદાહરણ</div>
+<div class="legend-item"><span class="dot concept"></span>સમજવું જ પડે</div>
+<div class="legend-item"><span class="dot formula"></span>યાદ રાખવું — મુખ્ય મુદ્દો</div>
+<div class="legend-item"><span class="dot exam"></span>પરીક્ષામાં વારંવાર</div>
+<div class="legend-item"><span class="dot mistake"></span>સામાન્ય ભૂલ</div>
+<div class="legend-item"><span class="dot check"></span>જાતે ચકાસો</div>
+</div>
+
+<div class="toc">
+<b>પ્રકરણનો નકશો</b> — અંતિમ લક્ષ્ય: રાજ્ય સરકારના ત્રણ અંગો, તેમની ભૂમિકા અને કેન્દ્ર-રાજ્યના વિષયોનું વિભાજન સમજાવવું.
+<ol>
+<li><span class="n">00</span><a href="#intro">પ્રકરણ શું કહે છે</a> — સ્થાનિક સરકાર અને રાજ્ય સરકાર</li>
+<li><span class="n">01</span><a href="#p1">રાજ્ય સરકારની રચના અને ત્રણ અંગો</a></li>
+<li><span class="n">02</span><a href="#p2">ધારાસભા — વિધાનસભા અને વિધાનપરિષદ</a></li>
+<li><span class="n">03</span><a href="#p3">કારોબારી — રાજ્યપાલ, મુખ્યમંત્રી, મંત્રીમંડળ</a></li>
+<li><span class="n">04</span><a href="#p4">ન્યાયતંત્ર અને વડી અદાલત</a></li>
+<li><span class="n">05</span><a href="#p5">આરોગ્ય — સેવાઓ અને યોજનાઓ</a></li>
+<li><span class="n">06</span><a href="#p6">કેન્દ્ર-રાજ્યના વિષયોની યાદી</a></li>
+<li><span class="n">07</span><a href="#p7">સારાંશ અને પરીક્ષાના જવાબ</a></li>
+</ol>
+</div>
+
+<!-- ============ PART 00 ============ -->
+<div class="part" id="intro">
+<h2><span class="num">00</span>પ્રકરણ શું કહે છે</h2>
+<p class="part-why">શા માટે ભણવું: આપણા રાજ્યનો વહીવટ, કાયદા અને રોજિંદી સેવાઓ (શાળા, રસ્તા, દવાખાનું) કોણ ચલાવે છે — તે જાણવું.</p>
+<div class="outcome"><span class="label">આ પ્રકરણ પછી તમે</span>
+(1) રાજ્ય સરકારના ત્રણ અંગો અને તેમના કામ કહી શકશો, (2) ધારાસભા, મુખ્યમંત્રી, રાજ્યપાલની ભૂમિકા સમજાવી શકશો, (3) કેન્દ્ર અને રાજ્યના ત્રણ પ્રકારના વિષયો ઓળખી શકશો, (4) આરોગ્ય સેવાઓમાં સરકારના કામો જણાવી શકશો.</div>
+
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span>
+<b>સ્થાનિક સરકાર</b> = <b>સ્થાન</b> (જગ્યા) + સરકાર → ગામ કે શહેરની નજીકની સરકાર. ગ્રામપંચાયત, તાલુકા પંચાયત, જિલ્લા પંચાયત, નગરપાલિકા, મહાનગરપાલિકા. (ગુજરાતમાં 1 એપ્રિલ, 1963થી પંચાયતીરાજ અમલમાં.)<br>
+<b>રાજ્ય સરકાર</b> = એક રાજ્યનો વહીવટ કરતી સરકાર. <b>કેન્દ્ર સરકાર</b> = આખા દેશનો વહીવટ, જેને <b>સંઘ સરકાર</b> પણ કહે છે.<br>
+<b>સંચાલક મંડળ</b> = સરકાર એક પ્રકારનું સંચાલક મંડળ છે, જે લોકોની ઇચ્છા મુજબ ચાલે.</div>
+
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>
+તમારી શાળાની ઇમારત કોના હેઠળ? પ્રાથમિક શાળા મોટે ભાગે રાજ્ય સરકાર ચલાવે; ગામની ગટર અને સફાઈ ગ્રામપંચાયત/નગરપાલિકા સંભાળે. દરેક સ્તરનું કામ અલગ.</div>
+
+<h3>પ્રકરણનો નકશો</h3>
+<div class="tblwrap"><table><tr><th>Part</th><th>શું</th><th>પ્રશ્ન પ્રકાર</th></tr>
+<tr><td class="rowlabel">01</td><td class="l">રચના — 28 રાજ્ય, 8 કેન્દ્રશાસિત</td><td class="l">ટૂંકનોંધ</td></tr>
+<tr><td class="rowlabel">02</td><td class="l">ધારાસભા</td><td class="l">ખાલી જગ્યા, ટૂંકનોંધ (4 ગુણ)</td></tr>
+<tr><td class="rowlabel">03</td><td class="l">કારોબારી</td><td class="l">ટૂંકનોંધ (5 ગુણ)</td></tr>
+<tr><td class="rowlabel">04–05</td><td class="l">ન્યાયતંત્ર, આરોગ્ય</td><td class="l">ટૂંકનોંધ, યોજનાઓ</td></tr>
+<tr><td class="rowlabel">06</td><td class="l">કેન્દ્ર-રાજ્ય વિષયો</td><td class="l">યાદી, કોષ્ટક</td></tr></table></div>
+<div class="next-line">→ <b>આગળ:</b> Part 01 — રાજ્ય સરકાર કઈ રચનામાં ચાલે.</div>
+</div>
+
+<!-- ============ PART 01 ============ -->
+<div class="part" id="p1">
+<h2><span class="num">01</span>રાજ્ય સરકારની રચના અને ત્રણ અંગો</h2>
+<p class="part-why">શા માટે ભણવું: "સરકારનાં અંગો" નો પ્રશ્ન દરેક પરીક્ષામાં આવે. (પાન 97–98)</p>
+<div class="submap"><span>ધારાસભા</span><span>કારોબારી</span><span>ન્યાયતંત્ર</span></div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું — ત્રણ અંગો</span>
+<div class="f">ધારાસભા (કાયદા ઘડે) · કારોબારી (કાયદાનો અમલ) · ન્યાયતંત્ર (કાયદાનું રક્ષણ)</div>
+<div class="meaning">ત્રણેયનું કામ જુદું, જેથી કોઈ એક અંગના હાથમાં બધી સત્તા ન રહે.</div></div>
+<div class="diagram"><svg viewBox="0 0 500 82" width="100%" style="max-width:500px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="250.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્ય સરકારનાં ત્રણ અંગો</text><rect x="5.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="78.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ધારાસભા</text><text x="78.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાયદા ઘડે</text><line x1="154.0" y1="49.0" x2="172.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="176.0,49.0 170.0,52.3 170.0,45.7" fill="var(--ink-2)"/><rect x="177.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--formula)" stroke-width="1.8"/><text x="250.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--formula)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કારોબારી</text><text x="250.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાયદાનો અમલ</text><line x1="326.0" y1="49.0" x2="344.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="348.0,49.0 342.0,52.3 342.0,45.7" fill="var(--ink-2)"/><rect x="349.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--check)" stroke-width="1.8"/><text x="422.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--check)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ન્યાયતંત્ર</text><text x="422.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાયદાનું રક્ષણ</text></svg><div class="diagram-cap">ત્રણ અંગો એકબીજાને તપાસે છે — અને કોઈ એક અંગ બધું ન કરી શકે.</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>
+ક્રિકેટ મેચ: નિયમો બનાવનાર (ધારાસભા), મેદાનમાં નિયમનો અમલ કરાવનાર અમ્પાયર (કારોબારી), અને નિયમ તોડનાર સામે નિર્ણય આપનાર રેફરી/કોર્ટ (ન્યાયતંત્ર). એક વ્યક્તિ ત્રણેય કરે તો ન્યાય ન રહે.</div>
+
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"કારોબારી કાયદા બનાવે" — ના. <b>કાયદા ધારાસભા બનાવે છે</b>; કારોબારી તેનો <b>અમલ</b> કરે છે.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) કાયદા કોણ ઘડે? (ii) ન્યાય કોણ આપે? (iii) કાયદાનો અમલ કોણ કરે?<br><span class="src">જવાબ: (i) ધારાસભા (ii) ન્યાયતંત્ર (iii) કારોબારી</span></div>
+
+<h3>1a. ભારતનું ભૂગોળ-રાજકારણ — રાજ્યો અને કેન્દ્રશાસિત</h3>
+<p>ભારતમાં <b>28 રાજ્યો</b> અને <b>8 કેન્દ્રશાસિત પ્રદેશો</b> છે. દિલ્હી ખાસ પ્રકારનું (વિશેષ) પ્રદેશ છે. દેશમાં બે કક્ષાની સરકાર છે: <b>રાષ્ટ્ર કક્ષા (કેન્દ્ર સરકાર)</b> અને <b>રાજ્ય કક્ષા (રાજ્ય સરકાર)</b>. રાજ્ય સરકારનું કાર્યક્ષેત્ર તે રાજ્ય પૂરતું મર્યાદિત છે.</p>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>ગુજરાતની સરકાર ગુજરાતના નાગરિકો માટે કાયદા કરે; બિહારની સરકાર બિહાર માટે. પાસપોર્ટ અને રેલવે કેન્દ્ર સરકાર — આખા દેશ માટે.</div>
+<div class="next-line">→ <b>આગળ:</b> Part 02 — ધારાસભા, એટલે કે કાયદા બનાવતું અંગ.</div>
+</div>
+
+<!-- ============ PART 02 ============ -->
+<div class="part" id="p2">
+<h2><span class="num">02</span>ધારાસભા — વિધાનસભા અને વિધાનપરિષદ</h2>
+<p class="part-why">શા માટે ભણવું: 4 ગુણનો ટૂંકનોંધ — "વિધાનસભાની રચના" — અને ખાલી જગ્યા પ્રશ્ન. (પાન 98–100)</p>
+<div class="submap"><span>બે ગૃહ</span><span>વિધાનસભા: નીચલું ગૃહ</span><span>વિધાનપરિષદ: ઉપલું ગૃહ</span><span>ચૂંટણી અને મુદત</span></div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું — બે ગૃહ</span>
+<div class="f">ઉપલું ગૃહ = વિધાનપરિષદ · નીચલું ગૃહ = વિધાનસભા</div>
+<div class="meaning">બધાં રાજ્યોમાં વિધાનપરિષદ નથી. <b>ગુજરાતમાં વિધાનપરિષદ નથી</b>; ફક્ત વિધાનસભા છે. (બિહાર, મહારાષ્ટ્ર, ઉત્તર પ્રદેશ, કર્ણાટક, તેલંગણા, આંધ્ર પ્રદેશમાં છે.)</div></div>
+<div class="diagram"><svg viewBox="0 0 420 218" width="100%" style="max-width:420px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="210.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાર્યકાળ / મુદત (વર્ષ)</text><line x1="10" y1="110" x2="410" y2="110" stroke="var(--ink)" stroke-width="1.2"/><text x="410.0" y="106.0" text-anchor="end" font-size="9.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">0</text><rect x="34.0" y="51.7" width="85.3" height="58.3" rx="3" fill="var(--formula)" opacity="0.6"/><text x="76.7" y="46.7" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">5</text><text x="76.7" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનસભા</text><rect x="167.3" y="40.0" width="85.3" height="70.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="210.0" y="35.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">6</text><text x="210.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનપરિષદ સભ્ય</text><rect x="300.7" y="51.7" width="85.3" height="58.3" rx="3" fill="var(--formula)" opacity="0.6"/><text x="343.3" y="46.7" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">5</text><text x="343.3" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યપાલ</text></svg><div class="diagram-cap">વિધાનસભા 5 વર્ષ · વિધાનપરિષદના સભ્ય 6 વર્ષ (દર બે વર્ષે એક તૃતીયાંશ નિવૃત્ત) · રાજ્યપાલ 5 વર્ષ.</div></div>
+<div class="diagram"><svg viewBox="0 0 420 218" width="100%" style="max-width:420px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="210.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">લઘુતમ વય (વર્ષ)</text><line x1="10" y1="110" x2="410" y2="110" stroke="var(--ink)" stroke-width="1.2"/><text x="410.0" y="106.0" text-anchor="end" font-size="9.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">0</text><rect x="34.0" y="68.0" width="85.3" height="42.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="76.7" y="63.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">18</text><text x="76.7" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મતદાર</text><rect x="167.3" y="51.7" width="85.3" height="58.3" rx="3" fill="var(--formula)" opacity="0.6"/><text x="210.0" y="46.7" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">25</text><text x="210.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનસભ્ય</text><rect x="300.7" y="40.0" width="85.3" height="70.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="343.3" y="35.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">30</text><text x="343.3" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનપરિષદ સભ્ય</text></svg><div class="diagram-cap">મતદારની વય 18; વિધાનસભાના સભ્ય બનવા 25; વિધાનપરિષદના સભ્ય બનવા 30.</div></div>
+
+<h3>2a. વિધાનસભા</h3>
+<p>વિધાનસભા ધારાસભાનું <b>નીચલું ગૃહ</b> છે. તેના સભ્યોને <b>ધારાસભ્ય</b> (MLA) કહે છે. દરેક મતવિસ્તારમાંથી એક-એક સભ્ય ચૂંટાય. <b>ગુજરાતમાં કુલ 182 બેઠક</b> છે; વિધાનસભાના ભવનનું નામ <b>વિઠ્ઠલભાઈ પટેલ વિધાનસભા ભવન</b> છે, જે ગાંધીનગરમાં આવેલું છે.</p>
+<div class="diagram"><svg viewBox="0 0 440 269" width="100%" style="max-width:440px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="220.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">દરેક બિંદુ = એક વિધાનસભા બેઠક</text><rect x="109.0" y="22" width="222" height="207" rx="8" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="122.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="35.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="50.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="65.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="80.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="95.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="110.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="125.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="140.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="155.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="170.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="185.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="200.5" r="5" fill="var(--accent)"/><circle cx="122.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="137.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="152.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="167.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="182.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="197.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="212.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="227.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="242.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="257.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="272.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="287.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="302.5" cy="215.5" r="5" fill="var(--accent)"/><circle cx="317.5" cy="215.5" r="5" fill="var(--accent)"/><text x="220.0" y="243.0" text-anchor="middle" font-size="10.5" fill="var(--accent)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ગુજરાત વિધાનસભા — 182 બેઠક</text><text x="220.0" y="265.0" text-anchor="middle" font-size="11" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">13 × 14 = 182</text></svg><div class="diagram-cap">ગુજરાત વિધાનસભાની 182 બેઠકો — દરેક બિંદુ એક બેઠક (ચિત્ર માટે 13 × 14 ગોઠવણી).</div></div>
+<div class="formula-box box"><span class="label">ધારાસભ્ય બનવાની લાયકાત</span>
+<div class="f">ભારતનો નાગરિક · વય 25 કે તેથી વધુ · સરકારી સંસ્થામાં સવેતન હોદ્દો નહીં · નાદાર, અસ્થિર મગજનો કે સજા પામેલ ગુનેગાર નહીં</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>તમારા મતવિસ્તારના ધારાસભ્ય કોણ છે? તેમનો સંપર્ક નંબર અને સરનામું મેળવો — પાઠ્યપુસ્તકની પ્રવૃત્તિ.</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>ધારાસભ્યની વય 18 લખવી. મતદારની વય 18; <b>ધારાસભ્યની વય 25</b>.</div>
+
+<h3>2b. વિધાનપરિષદ (ઉપલું ગૃહ)</h3>
+<p>રાજ્યની ધારાસભાના ઉપલા ગૃહને <b>વિધાનપરિષદ</b> કહે છે. વિધાનપરિષદના સભ્યો સ્થાનિક સ્વરાજ્યની સંસ્થાઓ, નોંધાયેલા સ્નાતકો, માધ્યમિક અને ઉચ્ચ માધ્યમિક શિક્ષકોના મતદાર મંડળ દ્વારા ચૂંટાય છે. સભ્ય બનવા વય <b>30 વર્ષ</b> કે તેથી વધુ. વિધાનપરિષદ <b>કાયમી ગૃહ</b> છે; તેના સભ્યોની મુદત 6 વર્ષ. રાજ્ય નક્કી કરે કે વિધાનપરિષદ રાખવી કે નહીં.</p>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"વિધાનસભા કાયમી ગૃહ છે" — ના. <b>વિધાનસભા કાયમી ગૃહ નથી</b> (મુદત પાંચ વર્ષ). <b>વિધાનપરિષદ કાયમી ગૃહ</b> છે.</div>
+
+<h3>2c. ચૂંટણી, અધ્યક્ષ, ઉપાધ્યક્ષ, ખરડો → કાયદો</h3>
+<p>ચૂંટણી દર પાંચ વર્ષે થાય છે. જે પક્ષના ધારાસભ્યો બહુમતીમાં હોય તે પક્ષ સરકાર રચે. ધારાસભા પોતાના સરળ સંચાલન માટે <b>અધ્યક્ષ (સ્પીકર)</b> અને <b>ઉપાધ્યક્ષ (નાયબ સ્પીકર)</b> ચૂંટે છે.</p>
+<div class="formula-box box"><span class="label">ખરડો કાયદો બને — ક્રમ</span>
+<div class="f">ખરડો → વિધાનસભા મંજૂર → રાજ્યપાલની મંજૂરી → કાયદો</div>
+<div class="meaning">ખરડો (bill) = કાયદાનો મુસદ્દો. રાજ્યપાલ સહી કરીને મંજૂર કરે ત્યારે તે કાયદો બને.</div></div>
+<div class="diagram"><svg viewBox="0 0 520 82" width="100%" style="max-width:520px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="260.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ખરડો કેવી રીતે કાયદો બને</text><rect x="5.0" y="22" width="108.0" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="59.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ખરડો</text><text x="59.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">(કાયદાનો મુસદ્દો)</text><line x1="116.0" y1="49.0" x2="134.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="138.0,49.0 132.0,52.3 132.0,45.7" fill="var(--ink-2)"/><rect x="139.0" y="22" width="108.0" height="54" rx="9" fill="var(--surface)" stroke="var(--check)" stroke-width="1.8"/><text x="193.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--check)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">વિધાનસભા</text><text x="193.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મંજૂર કરે</text><line x1="250.0" y1="49.0" x2="268.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="272.0,49.0 266.0,52.3 266.0,45.7" fill="var(--ink-2)"/><rect x="273.0" y="22" width="108.0" height="54" rx="9" fill="var(--surface)" stroke="var(--exam)" stroke-width="1.8"/><text x="327.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--exam)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યપાલ</text><text x="327.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">સહી કરે</text><line x1="384.0" y1="49.0" x2="402.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="406.0,49.0 400.0,52.3 400.0,45.7" fill="var(--ink-2)"/><rect x="407.0" y="22" width="108.0" height="54" rx="9" fill="var(--surface)" stroke="var(--formula)" stroke-width="1.8"/><text x="461.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--formula)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કાયદો</text><text x="461.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બને</text></svg><div class="diagram-cap">ખરડાથી કાયદો: વિધાનસભા મંજૂર કરે, રાજ્યપાલ સહી કરે ત્યારે જ કાયદો.</div></div>
+<div class="why-box box"><span class="label">ધારાસભાનાં કાર્યો</span>વર્તમાન કાયદામાં સુધારા-વધારા કરે · જરૂર પડે ત્યારે નવા કાયદા ઘડે · જૂના અને અપ્રસ્તુત કાયદા રદ કરે · અંદાજપત્ર મંજૂર કરે · કારોબારી પર અંકુશ રાખે.</div>
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span>
+<b>પ્રશ્નોત્તરી</b> = પ્રશ્ન + ઉત્તર → વિધાનસભામાં સભ્યો મંત્રીને પ્રશ્ન પૂછે અને મંત્રી જવાબ આપે. <b>સમયગાળો</b> (મુદત) = વિધાનસભાની 5 વર્ષની મુદત; મુદત પૂરી થતાં તેનું વિસર્જન થાય.</div>
+
+<h3>2d. રાષ્ટ્રપતિ શાસન (ટૂંકમાં)</h3>
+<p>ક્યારેક વિધાનસભા સરકાર રચી ન શકે ત્યારે રાજ્યપાલની ભલામણથી <b>રાષ્ટ્રપતિ શાસન</b> લાદવામાં આવે. તે સમય દરમિયાન રાજ્યપાલ રાજ્યનો વહીવટ સંભાળે.</p>
+<div class="diagram"><svg viewBox="0 0 500 82" width="100%" style="max-width:500px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="250.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાષ્ટ્રપતિ શાસન — ક્રમ</text><rect x="5.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--exam)" stroke-width="1.8"/><text x="78.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--exam)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ધારાસભા</text><text x="78.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ચાલી ન શકે</text><line x1="154.0" y1="49.0" x2="172.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="176.0,49.0 170.0,52.3 170.0,45.7" fill="var(--ink-2)"/><rect x="177.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="250.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યપાલની</text><text x="250.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">ભલામણ</text><line x1="326.0" y1="49.0" x2="344.0" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="348.0,49.0 342.0,52.3 342.0,45.7" fill="var(--ink-2)"/><rect x="349.0" y="22" width="146.0" height="54" rx="9" fill="var(--surface)" stroke="var(--check)" stroke-width="1.8"/><text x="422.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--check)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાષ્ટ્રપતિ</text><text x="422.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">શાસન લાદે</text></svg><div class="diagram-cap">રાષ્ટ્રપતિ શાસનનો ક્રમ.</div></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) વિધાનસભાની મુદત કેટલી? (ii) વિધાનપરિષદ ગુજરાતમાં છે? (iii) ધારાસભ્ય બનવાની લઘુતમ વય?<br><span class="src">જવાબ: (i) 5 વર્ષ (ii) ના (iii) 25 વર્ષ</span></div>
+<div class="next-line">→ <b>આગળ:</b> Part 03 — કારોબારી: કોણ રાજ્ય ચલાવે છે.</div>
+</div>
+
+<!-- ============ PART 03 ============ -->
+<div class="part" id="p3">
+<h2><span class="num">03</span>કારોબારી — રાજ્યપાલ, મુખ્યમંત્રી, મંત્રીમંડળ</h2>
+<p class="part-why">શા માટે ભણવું: 5 ગુણની ટૂંકનોંધ — "રાજ્યપાલ", "મુખ્યમંત્રીનાં કાર્યો" અને "રાજ્યની કારોબારી". (પાન 100–102)</p>
+<div class="submap"><span>રાજ્યપાલ (નામમાત્ર વડા)</span><span>મુખ્યમંત્રી (વાસ્તવિક વડા)</span><span>મંત્રીમંડળ</span></div>
+
+<h3>3a. કારોબારી શું છે?</h3>
+<p>રાજ્યની કારોબારીમાં <b>રાજ્યપાલ, મુખ્યમંત્રી અને મંત્રીમંડળ</b> આવે છે. તેમના નિયંત્રણ અને માર્ગદર્શન હેઠળ વહીવટી અધિકારીઓ કામ કરે છે. તેને <b>રાજકીય કારોબારી</b> (મંત્રીઓ) અને <b>વહીવટી કારોબારી</b> (અધિકારીઓ) કહે છે.</p>
+<div class="diagram"><svg viewBox="0 0 520 82" width="100%" style="max-width:520px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="260.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યની કારોબારી — કોણ કોની નિમણૂક કરે</text><rect x="5.0" y="22" width="152.7" height="54" rx="9" fill="var(--surface)" stroke="var(--check)" stroke-width="1.8"/><text x="81.3" y="38.0" text-anchor="middle" font-size="11.5" fill="var(--check)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યપાલ</text><text x="81.3" y="53.0" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">કેન્દ્ર નિમણૂક</text><text x="81.3" y="68.0" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">5 વર્ષ</text><line x1="160.7" y1="49.0" x2="178.7" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="182.7,49.0 176.7,52.3 176.7,45.7" fill="var(--ink-2)"/><rect x="183.7" y="22" width="152.7" height="54" rx="9" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.8"/><text x="260.0" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--accent)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મુખ્યમંત્રી</text><text x="260.0" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બહુમતી પક્ષનો નેતા</text><line x1="339.3" y1="49.0" x2="357.3" y2="49.0" stroke="var(--ink-2)" stroke-width="1.6"/><polygon points="361.3,49.0 355.3,52.3 355.3,45.7" fill="var(--ink-2)"/><rect x="362.3" y="22" width="152.7" height="54" rx="9" fill="var(--surface)" stroke="var(--formula)" stroke-width="1.8"/><text x="438.7" y="45.5" text-anchor="middle" font-size="11.5" fill="var(--formula)"  font-weight="700" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મંત્રીમંડળ</text><text x="438.7" y="60.5" text-anchor="middle" font-size="10" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">મુખ્યમંત્રીની સલાહે</text></svg><div class="diagram-cap">કોણ કોની નિમણૂક કરે — રાજ્યપાલ (કેન્દ્ર દ્વારા નિયુક્ત) → મુખ્યમંત્રી (બહુમતી પક્ષનો નેતા) → મંત્રીમંડળ (મુખ્યમંત્રીની સલાહે).</div></div>
+
+<h3>3b. રાજ્યપાલ</h3>
+<p>દરેક રાજ્યમાં રાજ્યપાલ હોય છે. રાષ્ટ્રપતિ તેમની નિમણૂક <b>પાંચ વર્ષ</b> માટે કરે છે, અને તે રાજ્યના <b>બંધારણીય વડા</b> છે. રાજ્યનો બધો વહીવટ તેમના નામથી થાય છે. રાજ્યપાલ બનવા વય 35 વર્ષ કે તેથી વધુ.</p>
+<div class="formula-box box"><span class="label">રાજ્યપાલનાં કાર્યો</span>
+<div class="f">નિમણૂક · બોલાવવું · સહી · નિમણૂક (એડ્વોકેટ જનરલ, જાહેર સેવા આયોગ) · મંજૂરી · તટસ્થ</div>
+<div class="meaning">બહુમતી પક્ષના નેતાને મુખ્યમંત્રી તરીકે નિમણૂક કરે; વિધાનસભા બોલાવે કે વિખેરે; ખરડા પર સહી કરે; રાજ્યના એડ્વોકેટ જનરલ અને જાહેર સેવા આયોગના અધ્યક્ષની નિમણૂક કરે.</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>રાજ્યપાલ એ રાજ્યના "નામના મુખિયા" જેવા છે — રોજના નિર્ણયો મુખ્યમંત્રી લે, પણ છેલ્લી સહી અને બંધારણીય મંજૂરી રાજ્યપાલની.</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"રાજ્યપાલ ચૂંટાય છે" — ના. <b>રાજ્યપાલની નિમણૂક રાષ્ટ્રપતિ કરે છે</b>.</div>
+
+<h3>3c. મુખ્યમંત્રી — વાસ્તવિક વડા</h3>
+<p>રાજ્યપાલ વિધાનસભામાં બહુમતી ધરાવતા પક્ષના નેતાને <b>મુખ્યમંત્રી</b> તરીકે નિમણૂક કરે છે. રાજ્યપાલની મોટા ભાગની સત્તાઓ મુખ્યમંત્રી અને તેમનું મંત્રીમંડળ ભોગવે છે. ગુજરાતના મુખ્યમંત્રીનું કાર્યાલય ગાંધીનગરમાં <b>સ્વર્ણિમ ભવન</b>માં છે. મંત્રીમંડળમાં ત્રણ કક્ષાના મંત્રીઓ હોય છે: (1) કેબિનેટ કક્ષાના, (2) રાજ્ય કક્ષાના અને (3) નાયબ કક્ષાના.</p>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) મુખ્યમંત્રી કોણ નિમે? (ii) મંત્રીમંડળની ત્રણ કક્ષા? (iii) ગુજરાતના મુખ્યમંત્રીનું કાર્યાલય?<br><span class="src">જવાબ: (i) રાજ્યપાલ (બહુમતી પક્ષના નેતા) (ii) કેબિનેટ, રાજ્ય, નાયબ (iii) સ્વર્ણિમ ભવન</span></div>
+
+<h3>3d. મુખ્યમંત્રી અને મંત્રીમંડળનાં કાર્યો</h3>
+<div class="tblwrap"><table><tr><th>મુખ્યમંત્રીનાં કાર્યો</th><th>મંત્રીમંડળનાં કાર્યો</th></tr>
+<tr><td class="l">મંત્રીમંડળની બેઠક બોલાવે</td><td class="l">કાયદો અને નીતિ ઘડવામાં મદદ</td></tr>
+<tr><td class="l">દરેક મંત્રીના કાર્ય પર દેખરેખ</td><td class="l">નિર્ણયોની જાણ રાજ્યપાલને</td></tr>
+<tr><td class="l">મંત્રીઓને માર્ગદર્શન</td><td class="l">વહીવટી ખાતાઓની વહેંચણી</td></tr>
+<tr><td class="l">મંત્રીમંડળની પુનઃરચના</td><td class="l">નાણામંત્રી અંદાજપત્ર રજૂ કરે</td></tr></table></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>"શિક્ષણમંત્રી" શાળામાં પુસ્તકો અને શિક્ષકો વિષે નિર્ણય લે. "ગૃહમંત્રી" પોલીસ અને સલામતી સંભાળે. "નાણામંત્રી" પૈસાનું આયોજન. દરેક ખાતું અલગ.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) અંદાજપત્ર કોણ રજૂ કરે? (ii) ખાતાઓની વહેંચણી કોણ કરે?<br><span class="src">જવાબ: (i) નાણામંત્રી (ii) મુખ્યમંત્રી</span></div>
+<div class="next-line">→ <b>આગળ:</b> Part 04 — ન્યાયતંત્ર: વડી અદાલત.</div>
+</div>
+
+<!-- ============ PART 04 ============ -->
+<div class="part" id="p4">
+<h2><span class="num">04</span>ન્યાયતંત્ર અને વડી અદાલત</h2>
+<p class="part-why">શા માટે ભણવું: ન્યાયતંત્રના કાર્યો અને ફોજદારી/દીવાની વિવાદનો ભેદ — ટૂંકનોંધ અને જોડકાં. (પાન 103)</p>
+<div class="submap"><span>વડી અદાલત</span><span>ફોજદારી</span><span>દીવાની</span><span>લોક અદાલત</span></div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું — બે પ્રકારના વિવાદ</span>
+<div class="f">ફોજદારી = ચોરી, લૂંટ, મારામારી, ખૂન · દીવાની = જમીન, મકાન, સંપત્તિ</div>
+<div class="meaning">દરેક જિલ્લામાં ફોજદારી અદાલત હોય છે. જમીન-મકાનનો વિવાદ દીવાની ગણાય.</div></div>
+<h3>4a. વડી અદાલત</h3>
+<p>ભારતના દરેક રાજ્યને <b>વડી અદાલત</b> છે. ગુજરાતની વડી અદાલત 1 મે, 1960થી શરૂ થઈ અને તે <b>અમદાવાદમાં</b> છે. વડી અદાલતના મુખ્ય ન્યાયાધીશની નિમણૂક રાષ્ટ્રપતિ સર્વોચ્ચ અદાલતના ન્યાયાધીશની સલાહ મુજબ કરે છે.</p>
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span>
+<b>નાગરિકોના હકોનું રક્ષણ</b> એટલે બંધારણે આપેલા હક (જીવન, સ્વતંત્રતા) તોડાય ત્યારે અદાલત તે બચાવે. <b>નજીરી અદાલત</b> (court of records) = જેના ચુકાદા બીજી અદાલતો માટે દાખલો (નજીર) બને.</div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>પડોશી તમારું ખેતર પચાવી પાડે તો તમે દીવાની દાવો કરો. કોઈએ ચોરી કરી તો પોલીસ ફરિયાદ — ફોજદારી કેસ.</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>જમીનના વિવાદને ફોજદારી ગણવો. <b>જમીન-મકાન = દીવાની</b>.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) ગુજરાતની વડી અદાલત ક્યાં છે? (ii) ચોરી કયા પ્રકારનો વિવાદ?<br><span class="src">જવાબ: (i) અમદાવાદ (ii) ફોજદારી</span></div>
+<div class="next-line">→ <b>આગળ:</b> Part 05 — આરોગ્ય સેવાઓ.</div>
+</div>
+
+<!-- ============ PART 05 ============ -->
+<div class="part" id="p5">
+<h2><span class="num">05</span>આરોગ્ય — સેવાઓ અને યોજનાઓ</h2>
+<p class="part-why">શા માટે ભણવું: 4 ગુણનો ટૂંકનોંધ — "જાહેર આરોગ્ય સેવાઓ", "મુખ્યમંત્રી અમૃતમ્ યોજના" — અને 5 ગુણ "નાગરિકના સ્વાસ્થ્ય માટે રાજ્ય સરકાર ક્યાં કાર્યો કરે છે?". (પાન 103–106)</p>
+<div class="submap"><span>સરકારી સેવાઓ</span><span>ખાનગી સેવાઓ</span><span>રાજ્ય યોજનાઓ</span><span>કેન્દ્ર યોજનાઓ</span></div>
+
+<div class="concept-box box"><span class="label">શબ્દોનો પાયો</span>
+<b>આરોગ્ય</b> = આરોગ્ય (રોગ વગરનું) — WHO વ્યાખ્યા મુજબ શારીરિક, માનસિક, સામાજિક અને આધ્યાત્મિક સુખાકારી. એટલે ફક્ત "રોગ ન હોવો" નહીં.</div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>108 નંબર પર એમ્બ્યુલન્સ — તાત્કાલિક સેવા. પ્રાથમિક આરોગ્ય કેન્દ્ર (PHC) ગામમાં, સિવિલ હૉસ્પિટલ મોટા શહેરમાં.</div>
+
+<h3>5a. રાજ્ય સરકારનાં આરોગ્ય-કાર્યો</h3>
+<div class="tblwrap"><table><tr><th>કાર્ય</th><th>ઉદાહરણ / શબ્દ</th></tr>
+<tr><td class="rowlabel">સસ્તા અનાજની દુકાનો</td><td class="l">ગરીબોને અનાજનું વિતરણ</td></tr>
+<tr><td class="rowlabel">રસીકરણ</td><td class="l">ઓરી, અછબડા, પોલિયો જેવા રોગો સામે</td></tr>
+<tr><td class="rowlabel">દારૂબંધી, ભેળસેળ</td><td class="l">ખાદ્યપદાર્થોમાં ભેળસેળ પર નિયંત્રણ</td></tr>
+<tr><td class="rowlabel">108 યોજના</td><td class="l">તાત્કાલિક સેવા</td></tr>
+<tr><td class="rowlabel">સ્વચ્છતા અને શૌચાલય</td><td class="l">સ્વચ્છતા અભિયાન</td></tr>
+<tr><td class="rowlabel">જનઔષધિ કેન્દ્ર</td><td class="l">સસ્તી સામાન્ય દવાઓ (Generic drugs)</td></tr>
+<tr><td class="rowlabel">રોગ નિયંત્રણ</td><td class="l">મેલેરિયા, કમળો, કોઢ, અંધત્વ, મધુપ્રમેહ, ક્ષય, કેન્સર</td></tr></table></div>
+
+<h3>5b. યોજનાઓ — રાજ્ય અને કેન્દ્ર</h3>
+<div class="tblwrap"><table><tr><th>રાજ્ય સરકારની યોજના</th><th>કેન્દ્ર સરકારની યોજના</th></tr>
+<tr><td class="l">મુખ્યમંત્રી અમૃતમ્ (મા) યોજના</td><td class="l">પ્રધાનમંત્રી જન આરોગ્ય યોજના</td></tr>
+<tr><td class="l">મિશન બાલમ સુખમ્</td><td class="l">રાષ્ટ્રીય રક્તપિત્ત નિર્મૂલન કાર્યક્રમ</td></tr>
+<tr><td class="l">મમતા સખી યોજના</td><td class="l">પ્રધાનમંત્રી સુરક્ષિત માતૃત્વ અભિયાન</td></tr>
+<tr><td class="l">ચિરંજીવી યોજના</td><td class="l">આયુષ્યમાન ભારત યોજના-2018</td></tr>
+<tr><td class="l">ખિલખિલાટ ડ્રૉપબેક યોજના</td><td class="l">અટલ સ્નેહ યોજના</td></tr></table></div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું — બે મુખ્ય યોજના</span>
+<div class="f">મુખ્યમંત્રી અમૃતમ્ (મા) = રાજ્ય · આયુષ્યમાન ભારત = કેન્દ્ર</div>
+<div class="meaning">અમૃતમ્ યોજના ગરીબ ગુજરાતી પરિવારને (વાર્ષિક આવક ₹4 લાખ કે ઓછી) મોટી બીમારીમાં સારવાર માટે. આયુષ્યમાન ભારત કેન્દ્રની, 1 એપ્રિલ 2018થી, દરેક પરિવાર માટે ₹5 લાખ સુધીનો વીમો.</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ — ખિલખિલાટ</span>બાળક જન્મે ત્યારે માતા-બાળકને હૉસ્પિટલથી ઘરે મૂકવા મફત વાહન. "જન્મ પછી ઘરે પહોંચવું" એ જ આ યોજનાનો અર્થ.</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>"મુખ્યમંત્રી અમૃતમ્ કેન્દ્ર સરકાર ચલાવે" — ના, એ <b>રાજ્ય</b> સરકારની યોજના છે.</div>
+
+<h3>5c. આરોગ્ય દિવસો (યાદ રાખવા જેવા)</h3>
+<div class="tblwrap"><table><tr><th>તારીખ</th><th>દિવસ</th><th>તારીખ</th><th>દિવસ</th></tr>
+<tr><td>7 એપ્રિલ</td><td class="l">વિશ્વ આરોગ્ય દિવસ</td><td>5 જૂન</td><td class="l">વિશ્વ પર્યાવરણ દિવસ</td></tr>
+<tr><td>8 માર્ચ</td><td class="l">વિશ્વ મહિલા દિવસ</td><td>14 જૂન</td><td class="l">વિશ્વ રક્તદાન દિવસ</td></tr>
+<tr><td>24 માર્ચ</td><td class="l">વિશ્વ ક્ષય-નિવારણ દિવસ</td><td>21 જૂન</td><td class="l">વિશ્વ યોગદિન</td></tr>
+<tr><td>25 એપ્રિલ</td><td class="l">વિશ્વ મલેરિયા દિવસ</td><td>1 ડિસેમ્બર</td><td class="l">વિશ્વ એઈડ્ઝ દિવસ</td></tr></table></div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) તાત્કાલિક સેવાની યોજના કઈ? (ii) મુખ્યમંત્રી અમૃતમ્ કોની સરકાર? (iii) વિશ્વ મહિલા દિવસ ક્યારે?<br><span class="src">જવાબ: (i) 108 (ii) રાજ્ય (iii) 8 માર્ચ</span></div>
+<div class="next-line">→ <b>આગળ:</b> Part 06 — કેન્દ્ર અને રાજ્યના વિષયોની વહેંચણી.</div>
+</div>
+
+<!-- ============ PART 06 ============ -->
+<div class="part" id="p6">
+<h2><span class="num">06</span>કેન્દ્ર-રાજ્યના વિષયોની યાદી</h2>
+<p class="part-why">શા માટે ભણવું: "ત્રણ યાદી"ની સંખ્યા અને કયા વિષય કઈ યાદીમાં — પરીક્ષાના કોષ્ટક-પ્રશ્ન. (પાન 102)</p>
+<div class="submap"><span>સંઘયાદી</span><span>રાજ્યયાદી</span><span>સંયુક્ત યાદી</span></div>
+
+<div class="formula-box box"><span class="label">યાદ રાખવું — ત્રણ યાદી</span>
+<div class="f">સંઘયાદી 97 (કેન્દ્ર) · રાજ્યયાદી 66 (રાજ્ય) · સંયુક્ત યાદી 47 (બંને)</div>
+<div class="meaning">કુલ 97 + 66 + 47 = 210 વિષયો. સંઘયાદીમાં: સંરક્ષણ, નાણાં, બેંકિંગ, ચૂંટણી, રેલવે, ટપાલ-ટેલિગ્રાફ, અણુશક્તિ. રાજ્યયાદીમાં: શિક્ષણ, આરોગ્ય, કૃષિ, સ્થાનિક સ્વરાજ્ય. સંયુક્ત યાદીમાં: છૂટાછવાયા, શિક્ષણ, ઉદ્યોગ, રોજગારી, વીજળી, વારસાઈ બાબતો, ફોજદારી કેસો.</div></div>
+<div class="diagram"><svg viewBox="0 0 420 218" width="100%" style="max-width:420px;display:block;margin:6px auto" xmlns="http://www.w3.org/2000/svg" role="img"><text x="210.0" y="14.0" text-anchor="middle" font-size="12" fill="var(--ink-2)"  stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">બંધારણની ત્રણ યાદીના વિષયોની સંખ્યા</text><line x1="10" y1="110" x2="410" y2="110" stroke="var(--ink)" stroke-width="1.2"/><text x="410.0" y="106.0" text-anchor="end" font-size="9.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">0</text><rect x="34.0" y="40.0" width="85.3" height="70.0" rx="3" fill="var(--formula)" opacity="0.6"/><text x="76.7" y="35.0" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">97</text><text x="76.7" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">સંઘયાદી</text><rect x="167.3" y="62.4" width="85.3" height="47.6" rx="3" fill="var(--formula)" opacity="0.6"/><text x="210.0" y="57.4" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">66</text><text x="210.0" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">રાજ્યયાદી</text><rect x="300.7" y="76.1" width="85.3" height="33.9" rx="3" fill="var(--formula)" opacity="0.6"/><text x="343.3" y="71.1" text-anchor="middle" font-size="10.5" fill="var(--formula)" font-family="var(--font-mono)" font-weight="600" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">47</text><text x="343.3" y="210.0" text-anchor="middle" font-size="10.5" fill="var(--ink-2)" font-family="var(--font-mono)" stroke="var(--surface)" stroke-width="3" paint-order="stroke" stroke-linejoin="round">સંયુક્ત યાદી</text></svg><div class="diagram-cap">બંધારણમાં ત્રણ યાદીમાં વિષયોની સંખ્યા.</div></div>
+<div class="why-box box"><span class="label">રોજિંદું ઉદાહરણ</span>તમારા ગામની સ્કૂલ (શિક્ષણ) રાજ્યયાદીમાં; ભારતીય રેલવે (સંઘયાદી); વીજળીનો કરાર બંને સરકાર (સંયુક્ત).</div>
+<div class="mistake-box box"><span class="label">સામાન્ય ભૂલ</span>ત્રણ યાદીની સંખ્યા ગોખીને વિષયોની યાદી ગૂંચવવી. <b>યાદ રાખો: સંઘ = કેન્દ્ર, રાજ્ય = રાજ્ય, સંયુક્ત = બંને</b>.</div>
+<div class="check-box box"><span class="label">જાતે ચકાસો</span>(i) શિક્ષણ કઈ યાદીમાં? (ii) સંરક્ષણ કઈ યાદીમાં? (iii) કેટલા વિષયો સંયુક્ત?<br><span class="src">જવાબ: (i) રાજ્યયાદી (ii) સંઘયાદી (iii) 47</span></div>
+<div class="next-line">→ <b>આગળ:</b> Part 07 — સારાંશ અને પરીક્ષાના જવાબ.</div>
+</div>
+
+<!-- ============ PART 07 ============ -->
+<div class="part" id="p7">
+<h2><span class="num">07</span>સારાંશ અને પરીક્ષાના જવાબ</h2>
+<p class="part-why">પરીક્ષા પહેલાં આ એક પાનું.</p>
+<div class="remember"><span class="label">યાદ રાખો</span><ol>
+<li>ત્રણ અંગો: ધારાસભા (કાયદા ઘડે), કારોબારી (અમલ), ન્યાયતંત્ર (રક્ષણ).</li>
+<li>વિધાનસભા (નીચલું, 5 વર્ષ, 182 બેઠક ગુજરાત) · વિધાનપરિષદ (ઉપલું, કાયમી, 6 વર્ષ, ગુજરાતમાં નથી).</li>
+<li>રાજ્યપાલ: કેન્દ્ર નિમે, 5 વર્ષ, બંધારણીય વડા · મુખ્યમંત્રી: બહુમતી પક્ષનો નેતા, વાસ્તવિક વડા.</li>
+<li>ધારાસભ્ય 25 વર્ષ · વિધાનપરિષદ 30 · મતદાર 18.</li>
+<li>વિષય: સંઘ 97, રાજ્ય 66, સંયુક્ત 47. ફોજદારી ≠ દીવાની.</li></ol></div>
+
+<h3>પરીક્ષાના નમૂના જવાબ</h3>
+<div class="example"><span class="label">1–2 ગુણ — એક-બે વાક્યમાં</span><div class="step"><b>પ્ર.</b> ધારાસભ્યની લઘુતમ વય કેટલી?</div><div class="step"><b>જ.</b> ધારાસભ્ય બનવા વય 25 વર્ષ કે તેથી વધુ હોવી જોઈએ.</div></div>
+<div class="example"><span class="label">4 ગુણ — ટૂંકનોંધ</span><div class="step"><b>પ્ર.</b> વિધાનસભાની રચના.</div><div class="step"><b>જ.</b> (1) વિધાનસભા ધારાસભાનું નીચલું ગૃહ છે. (2) દરેક મતવિસ્તારમાંથી એક ધારાસભ્ય ચૂંટાય; ગુજરાતમાં કુલ 182 બેઠક. (3) મુદત 5 વર્ષ; તે કાયમી ગૃહ નથી. (4) બહુમતી પક્ષ સરકાર રચે; અધ્યક્ષ અને ઉપાધ્યક્ષ ચૂંટાય.</div></div>
+<div class="example"><span class="label">5 ગુણ — ટૂંકનોંધ / કારોબારી</span><div class="step"><b>પ્ર.</b> મુખ્યમંત્રીનાં કાર્યો.</div><div class="step"><b>જ.</b> (1) મંત્રીમંડળની બેઠક બોલાવે. (2) દરેક મંત્રીના કાર્ય પર દેખરેખ રાખે. (3) મંત્રીઓને જરૂર પડે માર્ગદર્શન આપે. (4) મંત્રીમંડળના નિર્ણયોની જાણ રાજ્યપાલને કરે. (5) મંત્રીમંડળના મંત્રીઓને ખાતાઓની વહેંચણી કરે.</div></div>
+<div class="example"><span class="label">મુદ્દાસર — આરોગ્ય (5 ગુણ)</span><div class="step"><b>પ્ર.</b> નાગરિકના સ્વાસ્થ્ય માટે રાજ્ય સરકાર ક્યાં કાર્યો કરે છે?</div><div class="step"><b>જ.</b> (1) સસ્તા અનાજની દુકાનો દ્વારા ગરીબોને અનાજ. (2) ઓરી, અછબડા, પોલિયો જેવા રોગો સામે રસીકરણ. (3) ભેળસેળ અને દારૂબંધી પર નિયંત્રણ. (4) 108 યોજના દ્વારા તાત્કાલિક સેવા. (5) સ્વચ્છતા અભિયાન અને સસ્તી દવાઓ (જનઔષધિ).</div></div>
+
+<div class="next-line">→ <b>આગળ:</b> સ્વાધ્યાય અને પરીક્ષાની તૈયારી — Practice and Answer Keys.</div>
+</div>
+</div>

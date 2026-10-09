@@ -1,0 +1,109 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>લોકશાહીમાં સમાનતા — સ્વાધ્યાયના જવાબ</title>
+<style>
+:root{
+  --bg:#FBF9F4; --surface:#FFFFFF; --surface-2:#F3F0E7;
+  --ink:#241F16; --ink-2:#5B5647; --ink-3:#8C8672; --line:#E4DFD0;
+  --accent:#8B5E34; --accent-ink:#3E2A17; --accent-bg:#F1E4D3;
+  --formula:#1F4E42; --formula-bg:#E3F0EA; --formula-line:#9FC6B7;
+  --exam:#7A2E2E; --exam-bg:#F6E4E1; --exam-line:#DBA9A4;
+  --mistake:#8A5A00; --mistake-bg:#FDF1D9; --mistake-line:#E9C877;
+  --check:#2E4E7A; --check-bg:#E4ECF6; --check-line:#A9C0DB;
+  --font-display:'Fraunces','Noto Sans Gujarati',Georgia,serif;
+  --font-body:'Source Sans 3','Noto Sans Gujarati',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+    --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77; --line:#3A3428;
+    --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+    --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+    --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+    --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+    --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#181510; --surface:#211D16; --surface-2:#2A251C;
+  --ink:#EFE9DA; --ink-2:#C7C0AC; --ink-3:#948C77; --line:#3A3428;
+  --accent:#D7A876; --accent-ink:#F0DCC0; --accent-bg:#332618;
+  --formula:#8FCBB3; --formula-bg:#1B2E27; --formula-line:#2E5647;
+  --exam:#E39B94; --exam-bg:#301D1B; --exam-line:#5C332F;
+  --mistake:#E8C060; --mistake-bg:#2E2408; --mistake-line:#5C4712;
+  --check:#9DBEE6; --check-bg:#1C2635; --check-line:#38507A;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.5;padding:0 14px}
+.wrap{max-width:980px;margin:0 auto;padding-block:20px 60px}
+h1{font-family:var(--font-display);font-weight:600;font-size:clamp(22px,5vw,28px);margin:0 0 2px;text-wrap:balance}
+.subtitle{color:var(--ink-2);font-size:13px;margin:0 0 16px}
+.scan{background:var(--accent-bg);border:1.5px solid var(--accent);border-radius:12px;padding:12px 16px;margin-bottom:18px}
+.scan-label{font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px;display:block}
+.scan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 14px;font-size:13.5px;color:var(--accent-ink);font-weight:600}
+.scan-grid span{min-width:0;overflow-wrap:anywhere;line-height:1.4}
+h2{font-family:var(--font-display);font-weight:600;font-size:17px;margin:22px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px}
+h2 .n{font-family:var(--font-mono);font-size:11px;color:var(--accent);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.card{border-radius:10px;padding:10px 12px;border:1px solid;font-size:13.5px}
+.card .lbl{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin-bottom:3px;display:block;opacity:.85}
+.card .f{font-family:var(--font-mono);font-size:15px;font-weight:600;line-height:1.35}
+.card .m{font-size:12.5px;margin-top:3px;opacity:.9}
+.c-formula{background:var(--formula-bg);border-color:var(--formula-line);color:var(--formula)}
+.c-exam{background:var(--exam-bg);border-color:var(--exam-line);color:var(--exam)}
+.c-mistake{background:var(--mistake-bg);border-color:var(--mistake-line);color:var(--mistake)}
+.c-check{background:var(--check-bg);border-color:var(--check-line);color:var(--check)}
+.c-neutral{background:var(--surface);border-color:var(--line);color:var(--ink)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:5px 6px;border:1px solid var(--line);text-align:center}
+th{background:var(--surface-2);font-weight:600;color:var(--ink-2);font-size:11.5px}
+td.rl{text-align:left;color:var(--ink-2);font-weight:600;background:var(--surface-2);font-size:12px}
+.tblcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px;overflow-x:auto}
+.diagram{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px;margin:0}
+.diagram svg{display:block;width:100%;height:auto;max-height:200px}
+.diagram-cap{text-align:center;font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.vis{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:8px;margin-bottom:8px}
+.strip{display:flex;flex-wrap:wrap;gap:6px}
+.pill{background:var(--mistake-bg);border:1px solid var(--mistake-line);color:var(--mistake);border-radius:8px;padding:6px 10px;font-size:12.5px;flex:1 1 220px}
+.footer-note{text-align:center;color:var(--ink-3);font-size:11.5px;margin-top:26px}
+.jumpicon{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:var(--formula);color:var(--surface);text-decoration:none;font-size:11px;font-weight:700;vertical-align:middle;margin-left:4px}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@500;600&family=Noto+Sans+Gujarati:wght@400;600&display=swap" rel="stylesheet">
+<div class="wrap">
+<h1>પ્રકરણ 15 · લોકશાહીમાં સમાનતા — સ્વાધ્યાયના જવાબ</h1>
+<p class="subtitle">પાઠ્યપુસ્તક પાન 96 · જવાબ પાઠ્યપુસ્તકના લખાણ પર આધારિત</p>
+
+<h2><span class="n">1</span>ખાલી જગ્યા પૂરો</h2>
+<div class="tblcard"><table><tr><th>પ્રશ્ન</th><th>જવાબ</th></tr>
+<tr><td class="rl">(1) વિશ્વની સૌથી મોટી લોકશાહી ધરાવતો દેશ ___ છે.</td><td>ભારત</td></tr>
+<tr><td class="rl">(2) દેશનું સંચાલન કરવા માટેની માર્ગદર્શિકા ___ કહેવાય.</td><td>બંધારણ</td></tr>
+<tr><td class="rl">(3) ભારતનું બંધારણ વિશ્વનું ___ બંધારણ છે.</td><td>સૌથી મોટું લેખિત</td></tr></table></div>
+
+<h2><span class="n">2</span>ટૂંકમાં ઉત્તર</h2>
+<div class="tblcard"><table><tr><th>પ્રશ્ન</th><th>જવાબ</th></tr>
+<tr><td class="rl">(1) લોકશાહી કોને કહેવાય?</td><td class="l">લોકો દ્વારા, લોકો વડે અને લોકો માટે ચાલતું શાસન.</td></tr>
+<tr><td class="rl">(2) આપણને કઈ બાબતોમાં સમાનતાનો અધિકાર છે?</td><td class="l">ધર્મ, ભાષા/બોલી, શિક્ષણ, વ્યક્તિગત વિકાસ, લિંગ, વિચારોની અભિવ્યક્તિ (કોઈ પણ ચાર).</td></tr>
+<tr><td class="rl">(3) વ્યક્તિના સર્વાંગીણ વિકાસ માટે કઈ બાબત જરૂરી છે?</td><td class="l">સમાનતાનો અધિકાર — શિક્ષણ, વિકાસ અને રોજગારમાં સમાન તક (અપેક્ષિત).</td></tr></table></div>
+
+<h2><span class="n">3</span>એક-બે વાક્યમાં ઉત્તર</h2>
+<div class="tblcard"><table><tr><th>પ્રશ્ન</th><th>જવાબ</th></tr>
+<tr><td class="rl">(1) મતાધિકાર કોને મળે છે?</td><td class="l">18 વર્ષ અને તેથી વધુ ઉંમરના દરેક ભારતીય નાગરિકને.</td></tr>
+<tr><td class="rl">(2) ચૂંટણીપંચ શી કામગીરી કરે છે?</td><td class="l">ડર, ધાકધમકી કે દાદાગીરી વગર, તટસ્થ રીતે ચૂંટણી કરાવે છે.</td></tr>
+<tr><td class="rl">(3) બાળમજૂરી શા માટે અટકાવવી જોઈએ?</td><td class="l">બાળકને શિક્ષણનો અધિકાર મળે તે માટે; 14 વર્ષ સુધી મજૂરીએ રાખવું કાયદાનો ભંગ છે.</td></tr></table></div>
+
+<h2><span class="n">4</span>ટૂંક નોંધ</h2>
+<div class="card c-neutral"><span class="lbl">(1) લોકશાહીમાં સમાનતા</span><div class="m">સમાન અધિકાર + સમાન સન્માન + કાયદા સમક્ષ સમાનતા. સરકાર બંધારણ મુજબ સૌને સમાન તક આપવા કાર્ય કરે. (Notes Part 00, 01)</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(2) મતાધિકારમાં સમાનતા</span><div class="m">18 વર્ષ અને વધુ દરેકને મત. ચૂંટણીપંચ ડર વગર મતદાન કરાવે; મહિલાઓ માટે અલગ મથક; દિવ્યાંગ માટે ખાસ સુવિધા. (Notes Part 02)</div></div>
+<div class="card c-neutral" style="margin-top:6px"><span class="lbl">(3) બાળમજૂરી અને બાળઅધિકાર</span><div class="m">14 વર્ષ સુધી મફત, ફરજિયાત શિક્ષણ; બાળમજૂરી કાયદાનો ભંગ; ભણવું એ બાળઅધિકાર; બાળમજૂરી અટકાવવી નાગરિકની ફરજ. (Notes Part 03)</div></div>
+
+<h2><span class="n">5</span>"આપણે શું કરી શકીએ?" (કોષ્ટક)</h2>
+<div class="tblcard"><table><tr><th>વિગત</th><th>આપણે શું કરી શકીએ (સૂચન)</th></tr>
+<tr><td class="l">(1) મહિલાને ઓછી મજૂરી આપે તો?</td><td class="l">સરખા કામનો સરખો પગાર માંગવો; ગ્રામસભા/સંબંધિત સત્તાને જાણ.</td></tr>
+<tr><td class="l">(2) વ્યક્તિનું આર્થિક શોષણ થાય તો?</td><td class="l">શાળા, ગ્રામપંચાયત કે પોલીસને જાણ કરવી.</td></tr>
+<tr><td class="l">(3) બાળમજૂર જોવા મળે તો?</td><td class="l">બાળ-સહાય હેલ્પલાઇન કે પોલીસ/શાળાને જાણ.</td></tr>
+<tr><td class="l">(4) દિવ્યાંગ માટેની બસ-સીટ પર અન્ય બેઠું હોય તો?</td><td class="l">નમ્રતાથી સમજાવવું; કંડક્ટરને જાણ કરવી.</td></tr></table></div>
+<p class="footer-note">ઉપરના જવાબ પાઠ્યપુસ્તકના લખાણ અને Notes પર આધારિત. "આપણે શું કરી શકીએ" ના જવાબ માટે બાળકના પોતાના શબ્દો સાચા ગણો.</p>
+</div>
